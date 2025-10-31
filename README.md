@@ -33,7 +33,9 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that pr
    poetry install
    ```
 
-4. **Configure API credentials**:
+4. **Configure API credentials** (choose one method):
+
+   **Option A: Environment variables (recommended for .env file)**
    ```bash
    cp .env.example .env
    ```
@@ -42,6 +44,13 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that pr
    ```
    HF_API_KEY=your-api-key-here
    HF_SECRET=your-secret-key-here
+   ```
+
+   **Option B: Command line arguments**
+
+   Pass credentials directly when running the server:
+   ```bash
+   python -m higgsfield_mcp.server --api-key YOUR_KEY --secret YOUR_SECRET
    ```
 
    Get your API keys from: https://cloud.higgsfield.ai/api-keys
@@ -70,6 +79,8 @@ Add this server to your Claude Desktop configuration:
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
 
+**Method 1: Using environment variables in config (recommended)**
+
 ```json
 {
   "mcpServers": {
@@ -83,17 +94,64 @@ Add this server to your Claude Desktop configuration:
       ],
       "cwd": "/absolute/path/to/mcp_creator",
       "env": {
-        "HF_API_KEY": "your-api-key-here",
-        "HF_SECRET": "your-secret-key-here"
+        "HF_API_KEY": "${HF_API_KEY}",
+        "HF_SECRET": "${HF_SECRET}"
       }
     }
   }
 }
 ```
 
-**Note**: Replace `/absolute/path/to/mcp_creator` with the actual path to this directory.
+**Method 2: Using command line arguments**
 
-After adding the configuration, restart Claude Desktop.
+```json
+{
+  "mcpServers": {
+    "higgsfield": {
+      "command": "poetry",
+      "args": [
+        "run",
+        "python",
+        "-m",
+        "higgsfield_mcp.server",
+        "--api-key",
+        "${HF_API_KEY}",
+        "--secret",
+        "${HF_SECRET}"
+      ],
+      "cwd": "/absolute/path/to/mcp_creator"
+    }
+  }
+}
+```
+
+**Method 3: Hardcoded credentials (not recommended for security)**
+
+```json
+{
+  "mcpServers": {
+    "higgsfield": {
+      "command": "poetry",
+      "args": [
+        "run",
+        "python",
+        "-m",
+        "higgsfield_mcp.server"
+      ],
+      "cwd": "/absolute/path/to/mcp_creator",
+      "env": {
+        "HF_API_KEY": "your-actual-api-key-here",
+        "HF_SECRET": "your-actual-secret-here"
+      }
+    }
+  }
+}
+```
+
+**Notes**:
+- Replace `/absolute/path/to/mcp_creator` with the actual path to this directory
+- Methods 1 & 2 require `HF_API_KEY` and `HF_SECRET` to be set in your shell environment
+- After adding the configuration, restart Claude Desktop
 
 ### FastMCP Cloud Deployment
 

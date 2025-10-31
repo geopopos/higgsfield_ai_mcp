@@ -5,6 +5,7 @@ FastMCP server exposing Higgsfield AI capabilities to LLMs
 import os
 import json
 import sys
+import argparse
 from pathlib import Path
 from typing import Optional
 from dotenv import load_dotenv
@@ -18,6 +19,12 @@ try:
     from higgsfield_mcp.client import HiggsfieldClient
 except ImportError:
     from .client import HiggsfieldClient
+
+# Parse command line arguments
+parser = argparse.ArgumentParser(description='Higgsfield AI MCP Server')
+parser.add_argument('--api-key', type=str, help='Higgsfield API key')
+parser.add_argument('--secret', type=str, help='Higgsfield secret key')
+args, unknown = parser.parse_known_args()
 
 # Load environment variables from .env file
 load_dotenv()
@@ -40,9 +47,9 @@ mcp = FastMCP(
     version="0.1.0"
 )
 
-# Initialize Higgsfield client
-api_key = os.getenv("HF_API_KEY", "")
-secret = os.getenv("HF_SECRET", "")
+# Get credentials from: 1) command line args, 2) environment variables, 3) .env file
+api_key = args.api_key or os.getenv("HF_API_KEY", "")
+secret = args.secret or os.getenv("HF_SECRET", "")
 
 # Only validate credentials when actually running (not during inspection)
 if not api_key or not secret:
@@ -53,9 +60,8 @@ if not api_key or not secret:
     # Show warning if this is not just an inspection
     import warnings
     warnings.warn(
-        "Missing HF_API_KEY and/or HF_SECRET environment variables. "
-        "The server will not be able to make actual API calls. "
-        "Please create a .env file with your Higgsfield credentials.",
+        "Missing HF_API_KEY and/or HF_SECRET. Provide via --api-key and --secret arguments "
+        "or set HF_API_KEY and HF_SECRET environment variables.",
         RuntimeWarning
     )
 
