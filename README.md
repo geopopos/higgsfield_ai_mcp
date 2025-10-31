@@ -15,21 +15,24 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that pr
 ### Prerequisites
 
 - Python 3.10 or higher
-- [Poetry](https://python-poetry.org/) for dependency management
+- pip (Python package installer)
 - Higgsfield AI account with API credentials ([Sign up](https://cloud.higgsfield.ai))
 
 ### Setup
 
 1. **Clone or download this repository**
 
-2. **Install Poetry** (if not already installed):
+2. **Install dependencies** (choose one method):
+
+   **Option A: Using pip (recommended for simplicity)**
    ```bash
-   curl -sSL https://install.python-poetry.org | python3 -
+   cd higgsfield_ai_mcp
+   pip install -r requirements.txt
    ```
 
-3. **Install dependencies**:
+   **Option B: Using Poetry**
    ```bash
-   cd mcp_creator
+   cd higgsfield_ai_mcp
    poetry install
    ```
 
@@ -59,17 +62,18 @@ A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that pr
 
 ### Local Development & Testing
 
-Test the server using FastMCP's dev mode:
+Test the server:
 
 ```bash
-# Activate poetry environment
-poetry shell
-
-# Run in development mode with auto-reload
-fastmcp dev src/higgsfield_mcp/server.py
-
-# Or run directly
+# Run directly with Python
 python -m higgsfield_mcp.server
+
+# Or with command line arguments
+python -m higgsfield_mcp.server --api-key YOUR_KEY --secret YOUR_SECRET
+
+# Run in development mode with auto-reload (if using Poetry)
+poetry shell
+fastmcp dev src/higgsfield_mcp/server.py
 ```
 
 ### Claude Desktop Integration
@@ -79,20 +83,18 @@ Add this server to your Claude Desktop configuration:
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
 
-**Method 1: Using environment variables in config (recommended)**
+**Method 1: Using Python directly with environment variables (recommended)**
 
 ```json
 {
   "mcpServers": {
     "higgsfield": {
-      "command": "poetry",
+      "command": "python",
       "args": [
-        "run",
-        "python",
         "-m",
         "higgsfield_mcp.server"
       ],
-      "cwd": "/absolute/path/to/mcp_creator",
+      "cwd": "/absolute/path/to/higgsfield_ai_mcp",
       "env": {
         "HF_API_KEY": "${HF_API_KEY}",
         "HF_SECRET": "${HF_SECRET}"
@@ -108,10 +110,8 @@ Add this server to your Claude Desktop configuration:
 {
   "mcpServers": {
     "higgsfield": {
-      "command": "poetry",
+      "command": "python",
       "args": [
-        "run",
-        "python",
         "-m",
         "higgsfield_mcp.server",
         "--api-key",
@@ -119,29 +119,29 @@ Add this server to your Claude Desktop configuration:
         "--secret",
         "${HF_SECRET}"
       ],
-      "cwd": "/absolute/path/to/mcp_creator"
+      "cwd": "/absolute/path/to/higgsfield_ai_mcp"
     }
   }
 }
 ```
 
-**Method 3: Hardcoded credentials (not recommended for security)**
+**Method 3: Using Poetry (if you installed with Poetry)**
 
 ```json
 {
   "mcpServers": {
     "higgsfield": {
-      "command": "poetry",
+      "command": "/Users/YOUR_USERNAME/.local/bin/poetry",
       "args": [
         "run",
         "python",
         "-m",
         "higgsfield_mcp.server"
       ],
-      "cwd": "/absolute/path/to/mcp_creator",
+      "cwd": "/absolute/path/to/higgsfield_ai_mcp",
       "env": {
-        "HF_API_KEY": "your-actual-api-key-here",
-        "HF_SECRET": "your-actual-secret-here"
+        "HF_API_KEY": "${HF_API_KEY}",
+        "HF_SECRET": "${HF_SECRET}"
       }
     }
   }
@@ -149,8 +149,9 @@ Add this server to your Claude Desktop configuration:
 ```
 
 **Notes**:
-- Replace `/absolute/path/to/mcp_creator` with the actual path to this directory
-- Methods 1 & 2 require `HF_API_KEY` and `HF_SECRET` to be set in your shell environment
+- Replace `/absolute/path/to/higgsfield_ai_mcp` with the actual path to this directory
+- For Method 1 & 2, ensure `HF_API_KEY` and `HF_SECRET` are set in your shell environment
+- For Method 3 with Poetry, use the full path (no `~` expansion)
 - After adding the configuration, restart Claude Desktop
 
 ### FastMCP Cloud Deployment
