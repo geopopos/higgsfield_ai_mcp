@@ -88,7 +88,8 @@ class HiggsfieldClient:
         self,
         image_url: str,
         motion_id: str,
-        quality: str = "standard",
+        prompt: str = "",
+        model: str = "dop-preview",
         webhook_url: Optional[str] = None,
         webhook_secret: Optional[str] = None
     ) -> Dict[str, Any]:
@@ -96,33 +97,82 @@ class HiggsfieldClient:
         Generate video from image using DoP model
 
         Args:
-            image_url: URL of the source image
+            image_url: URL of the source image (must be publicly accessible)
             motion_id: Motion preset ID (use list_motions to get available)
-            quality: Video quality - "lite", "turbo", or "standard" (default)
+            prompt: Description of the image/scene (auto-generated if empty)
+            model: DoP model - "dop-lite", "dop-turbo", or "dop-preview" (default)
             webhook_url: Optional webhook URL for completion notification
             webhook_secret: Secret for webhook verification
 
         Returns:
             Job set response with job ID for polling
+
+        Note:
+            The API requires both 'prompt' and 'input_images' fields.
+            If no prompt is provided, a generic one will be used.
         """
+        # Use generic prompt if none provided
+        if not prompt:
+            prompt = "Cinematic video with natural motion"
+
+        # API requires input_images array format, not image_url string
         params = {
-            "image_url": image_url,
-            "motion_id": motion_id,
-            "quality": quality
+            "model": model,
+            "prompt": prompt,
+            "input_images": [{
+                "type": "image_url",
+                "image_url": image_url
+            }],
+            "motions": [{
+                "id": motion_id,
+                "strength": 0.5
+            }]
         }
 
+        # Build request body with params
+        request_body = {"params": params}
+
+        # Webhook goes at top level, not in params
         if webhook_url:
-            params["webhook"] = {
+            request_body["webhook"] = {
                 "url": webhook_url,
                 "secret": webhook_secret or ""
             }
+
+        # Debug: write request/response to file
+        import json as json_module
+        debug_file = "/tmp/higgsfield_debug.txt"
+
+        try:
+            with open(debug_file, "a") as f:
+                f.write(f"\n{'='*80}\n")
+                f.write(f"REQUEST at {__import__('datetime').datetime.now()}\n")
+                f.write(f"Body: {json_module.dumps(request_body, indent=2)}\n")
+                f.flush()
+        except Exception as e:
+            # If debug fails, write error to another file
+            try:
+                with open("/tmp/higgsfield_debug_error.txt", "a") as f:
+                    f.write(f"Debug write error: {e}\n")
+                    f.flush()
+            except:
+                pass
 
         async with httpx.AsyncClient(timeout=30.0) as client:
             response = await client.post(
                 f"{self.base_url}/v1/image2video/dop",
                 headers=self.headers,
-                json={"params": params}
+                json=request_body
             )
+
+            try:
+                with open(debug_file, "a") as f:
+                    f.write(f"RESPONSE status: {response.status_code}\n")
+                    f.write(f"RESPONSE body: {response.text}\n")
+                    f.flush()
+            except:
+                pass
+
             response.raise_for_status()
             return response.json()
 

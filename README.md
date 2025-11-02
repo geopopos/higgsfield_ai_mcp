@@ -2,6 +2,15 @@
 
 A [Model Context Protocol (MCP)](https://modelcontextprotocol.io) server that provides access to [Higgsfield AI](https://higgsfield.ai)'s cinematic-grade image and video generation capabilities. Built with [FastMCP](https://github.com/jlowin/fastmcp).
 
+## 🔧 Recent Fix (Nov 2, 2025)
+
+**Video generation now works correctly!** The `generate_video` function has been fixed to use the proper API format:
+- Added required `prompt` parameter (optional, auto-generated if not provided)
+- Fixed API payload structure from `image_url` to `input_images` array format
+- Added comprehensive documentation and examples
+
+See `HIGGSFIELD_VIDEO_GENERATION_GUIDE.md` in the parent directory for detailed usage.
+
 ## Features
 
 - **Text-to-Image Generation**: Create high-quality images using the Soul model
@@ -186,9 +195,26 @@ Generate an image: "A woman with sharp eyes sitting on a minimalist bench in a d
 Convert images to cinematic videos with motion effects.
 
 **Parameters**:
-- `image_url` (required): Source image URL
-- `motion_id` (required): Motion preset ID (browse with resources)
+- `image_url` (required): Source image URL (must be publicly accessible via HTTPS)
+- `motion_id` (required): Motion preset ID (browse with `higgsfield://motions` resource)
+- `prompt` (optional): Description of the image/scene. Auto-generated if not provided.
 - `quality`: "lite", "turbo", or "standard" (default)
+
+**Example**:
+```
+generate_video(
+  image_url="https://cdn.example.com/beach-selfie.png",
+  motion_id="31177282-bde3-4870-b283-1135ca0a201a",
+  prompt="A woman taking a selfie at a beach construction site",
+  quality="turbo"
+)
+```
+
+**Important Notes**:
+- Image URL must be publicly accessible (Higgsfield servers need to download it)
+- Processing takes 20-60 seconds depending on quality
+- Poll `get_generation_status` every 10 seconds to check completion
+- Results are cached for 7 days
 
 ### `create_character`
 Create a reusable character reference for consistent generation.

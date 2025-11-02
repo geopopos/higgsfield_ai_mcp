@@ -130,6 +130,7 @@ async def generate_image(
 async def generate_video(
     image_url: str,
     motion_id: str,
+    prompt: Optional[str] = None,
     quality: str = "standard"
 ) -> str:
     """
@@ -139,9 +140,11 @@ async def generate_video(
     returned job_set_id to check completion and retrieve results.
 
     Args:
-        image_url: URL of the source image to animate
+        image_url: URL of the source image to animate (must be publicly accessible via HTTPS)
         motion_id: Motion preset ID (use higgsfield://motions resource to browse available)
-        quality: Video quality - "lite" (cheapest), "turbo" (2x speed), or "standard" (highest quality)
+        prompt: Optional description of the image/scene. If not provided, a generic prompt is used.
+                Example: "A woman taking a selfie at a beach construction site"
+        quality: Video quality - "lite" (cheapest/fastest), "turbo" (2x speed), or "standard" (highest quality, default)
 
     Returns:
         Job information including job_set_id for polling status
@@ -149,15 +152,30 @@ async def generate_video(
     Example:
         generate_video(
             image_url="https://example.com/image.jpg",
-            motion_id="3c90c3cc-0d44-4b50-8888-8dd25736052a",
-            quality="standard"
+            motion_id="31177282-bde3-4870-b283-1135ca0a201a",
+            prompt="A serene mountain landscape at sunset",
+            quality="turbo"
         )
+
+    Important:
+        - Image URL must be publicly accessible (Higgsfield servers need to fetch it)
+        - Processing takes 20-60 seconds depending on quality
+        - Poll get_generation_status every 10 seconds to check completion
     """
     try:
+        # Map quality to model parameter
+        model_map = {
+            "lite": "dop-lite",
+            "turbo": "dop-turbo",
+            "standard": "dop-preview"
+        }
+        model = model_map.get(quality, "dop-preview")
+
         result = await client.generate_video(
             image_url=image_url,
             motion_id=motion_id,
-            quality=quality
+            prompt=prompt or "",
+            model=model
         )
 
         return json.dumps({
@@ -169,10 +187,22 @@ async def generate_video(
             "jobs": result["jobs"]
         }, indent=2)
     except Exception as e:
+        # Debug: capture more error details
+        import traceback
         return json.dumps({
             "success": False,
             "error": str(e),
-            "message": "Failed to start video generation"
+            "error_type": type(e).__name__,
+            "traceback": traceback.format_exc(),
+            "message": "Failed to start video generation",
+            "debug_info": {
+                "image_url": image_url,
+                "motion_id": motion_id,
+                "model": model_map.get(quality, "dop-preview"),
+                "prompt_provided": bool(prompt),
+                "api_key_configured": bool(client.headers.get("hf-api-key")),
+                "api_key_preview": client.headers.get("hf-api-key", "")[:8] + "..." if client.headers.get("hf-api-key") else "NOT SET"
+            }
         }, indent=2)
 
 
@@ -298,6 +328,23 @@ async def get_generation_status(job_set_id: str) -> str:
             "error": str(e),
             "message": "Failed to retrieve job status"
         }, indent=2)
+
+
+@mcp.tool
+async def debug_credentials() -> str:
+    """
+    Debug tool to check if credentials are properly configured.
+
+    Returns:
+        Information about credential configuration
+    """
+    return json.dumps({
+        "api_key_configured": bool(client.headers.get("hf-api-key")),
+        "secret_configured": bool(client.headers.get("hf-secret")),
+        "api_key_preview": client.headers.get("hf-api-key", "")[:8] + "..." if client.headers.get("hf-api-key") else "NOT SET",
+        "base_url": client.base_url,
+        "headers_keys": list(client.headers.keys())
+    }, indent=2)
 
 
 @mcp.tool
