@@ -311,3 +311,71 @@ class HiggsfieldClient:
                 headers=self.headers
             )
             response.raise_for_status()
+
+    async def generate_talking_head(
+        self,
+        image_url: str,
+        audio_url: str,
+        prompt: str,
+        quality: str = "high",
+        duration: int = 5,
+        enhance_prompt: bool = False,
+        seed: int = 42,
+        webhook_url: Optional[str] = None,
+        webhook_secret: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """
+        Generate a talking head video from image and audio using Speak v2 model
+
+        Args:
+            image_url: URL of the source image (portrait/headshot)
+            audio_url: URL of the audio file (will be cut to selected duration)
+            prompt: Text description of the image/scene
+            quality: Video quality - "high" or "mid" (default: "high")
+            duration: Video duration in seconds - 5, 10, or 15 (default: 5)
+            enhance_prompt: Whether to enhance the prompt automatically
+            seed: Random seed for reproducibility (1-1,000,000)
+            webhook_url: Optional webhook URL for completion notification
+            webhook_secret: Secret for webhook verification
+
+        Returns:
+            Job set response with job ID for polling
+
+        Note:
+            - Audio MUST be in WAV format (the API only accepts WAV, not MP3)
+            - Audio will be automatically trimmed to match the selected duration
+            - Image should be a portrait/headshot for best results
+            - Both image_url and audio_url must be publicly accessible
+        """
+        params = {
+            "input_image": {
+                "type": "image_url",
+                "image_url": image_url
+            },
+            "input_audio": {
+                "type": "audio_url",
+                "audio_url": audio_url
+            },
+            "prompt": prompt,
+            "quality": quality,
+            "duration": duration,
+            "enhance_prompt": enhance_prompt,
+            "seed": seed
+        }
+
+        request_body = {"params": params}
+
+        if webhook_url:
+            request_body["webhook"] = {
+                "url": webhook_url,
+                "secret": webhook_secret or ""
+            }
+
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            response = await client.post(
+                f"{self.base_url}/v1/speak/higgsfield",
+                headers=self.headers,
+                json=request_body
+            )
+            response.raise_for_status()
+            return response.json()

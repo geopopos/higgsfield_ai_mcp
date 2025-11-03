@@ -38,6 +38,7 @@ mcp = FastMCP(
     Core Features:
     - Generate high-quality images from text prompts using the Soul model
     - Convert images to cinematic videos with motion presets using DoP model
+    - Create talking head videos from image and audio using Speak v2 model
     - Create and manage character references for consistent character generation
     - Browse available styles and motion presets
 
@@ -203,6 +204,83 @@ async def generate_video(
                 "api_key_configured": bool(client.headers.get("hf-api-key")),
                 "api_key_preview": client.headers.get("hf-api-key", "")[:8] + "..." if client.headers.get("hf-api-key") else "NOT SET"
             }
+        }, indent=2)
+
+
+@mcp.tool
+async def generate_talking_head(
+    image_url: str,
+    audio_url: str,
+    prompt: str,
+    quality: str = "high",
+    duration: int = 5,
+    enhance_prompt: bool = False,
+    seed: int = 42
+) -> str:
+    """
+    Generate a talking head video from an image and audio file using Speak v2 model.
+
+    This starts an asynchronous generation job. Use get_generation_status with the
+    returned job_set_id to check completion and retrieve results.
+
+    Args:
+        image_url: URL of the source image (portrait/headshot, must be publicly accessible)
+        audio_url: URL of the audio file in WAV format (must be publicly accessible, will be cut to selected duration)
+        prompt: Text description of the image/scene (e.g., "A professional woman in business attire")
+        quality: Video quality - "high" (default) or "mid"
+        duration: Video duration in seconds - 5 (default), 10, or 15
+        enhance_prompt: Whether to enhance the prompt automatically (default: False)
+        seed: Random seed for reproducibility, 1-1,000,000 (default: 42)
+
+    Returns:
+        Job information including job_set_id for polling status
+
+    Example:
+        generate_talking_head(
+            image_url="https://example.com/portrait.jpg",
+            audio_url="https://example.com/speech.wav",
+            prompt="A professional woman giving a presentation",
+            quality="high",
+            duration=10
+        )
+
+    Important:
+        - Both image_url and audio_url must be publicly accessible via HTTPS
+        - Audio MUST be in WAV format (not MP3). Use ffmpeg to convert: ffmpeg -i input.mp3 -acodec pcm_s16le -ar 44100 output.wav
+        - Image should be a portrait/headshot for best results
+        - Audio will be automatically trimmed to match the selected duration
+        - Processing takes 2-3 minutes depending on duration and quality
+        - Poll get_generation_status every 10-15 seconds to check completion
+    """
+    try:
+        result = await client.generate_talking_head(
+            image_url=image_url,
+            audio_url=audio_url,
+            prompt=prompt,
+            quality=quality,
+            duration=duration,
+            enhance_prompt=enhance_prompt,
+            seed=seed
+        )
+
+        return json.dumps({
+            "success": True,
+            "job_set_id": result["id"],
+            "job_type": result["type"],
+            "status": "Job started - use get_generation_status to check completion",
+            "created_at": result["created_at"],
+            "jobs": result["jobs"],
+            "duration": duration,
+            "quality": quality
+        }, indent=2)
+    except Exception as e:
+        import traceback
+        return json.dumps({
+            "success": False,
+            "error": str(e),
+            "error_type": type(e).__name__,
+            "traceback": traceback.format_exc(),
+            "message": "Failed to start talking head video generation"
         }, indent=2)
 
 
