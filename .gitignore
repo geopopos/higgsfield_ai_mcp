@@ -33,6 +33,9 @@ poetry.lock
 .env
 .env.local
 
+# Local MCP config (contains secrets)
+.mcp.json
+
 # IDE
 .vscode/
 .idea/
