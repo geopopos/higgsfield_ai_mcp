@@ -163,6 +163,20 @@ Add this server to your Claude Desktop configuration:
 - For Method 3 with Poetry, use the full path (no `~` expansion)
 - After adding the configuration, restart Claude Desktop
 
+### Claude Code CLI (project-level `.mcp.json`)
+
+Claude Code picks up a `.mcp.json` in the project root automatically. This repo ships `.mcp.json.example` as a template — copy it and fill in your real credentials:
+
+```bash
+cp .mcp.json.example .mcp.json
+```
+
+Then edit `.mcp.json` and replace `your-api-key-here` / `your-secret-key-here` with the real values from https://cloud.higgsfield.ai/api-keys.
+
+`.mcp.json` is gitignored so your credentials stay out of git. Restart Claude Code after editing for the new env to take effect.
+
+> **Note:** Claude Code does **not** expand `${HF_API_KEY}`-style shell references in `.mcp.json`. You must write the literal credential values into the file.
+
 ### FastMCP Cloud Deployment
 
 Deploy to FastMCP Cloud for remote access:
@@ -351,8 +365,10 @@ mcp_creator/
 │       ├── server.py          # FastMCP server with tools & resources
 │       └── client.py          # Async Higgsfield API wrapper
 ├── pyproject.toml             # Poetry configuration
-├── .env.example               # Credential template
+├── .env.example               # Credential template (for .env / shell)
 ├── .env                       # Your credentials (gitignored)
+├── .mcp.json.example          # Claude Code MCP config template
+├── .mcp.json                  # Your local MCP config (gitignored)
 ├── .gitignore
 └── README.md
 ```

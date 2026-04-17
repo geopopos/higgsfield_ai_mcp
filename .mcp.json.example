@@ -7,8 +7,8 @@
         "higgsfield_mcp.server"
       ],
       "env": {
-        "HF_API_KEY": "${HF_API_KEY}",
-        "HF_SECRET": "${HF_SECRET}"
+        "HF_API_KEY": "your-api-key-here",
+        "HF_SECRET": "your-secret-key-here"
       }
     }
   }
