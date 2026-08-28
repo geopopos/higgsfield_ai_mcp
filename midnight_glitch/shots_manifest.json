@@ -1,0 +1,246 @@
+{
+  "style_preset": "korean_dark_trap_uk_drill_cyberpunk",
+  "total_shots": 35,
+  "bpm": 143.55,
+  "fps": 24,
+  "duration_sec": 126.68,
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "section": 1,
+      "start_time": 0.0,
+      "end_time": 4.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, dark neon Seoul alleyway at 3AM in heavy rain mist, 85mm shallow depth of field orbit 3D camera, photorealistic, 35mm film grain, moody cinematic vibe. Lyric theme: '(Yeah, midnight in the city)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png",
+      "start_frame": 0,
+      "end_frame": 96
+    },
+    {
+      "shot_id": "shot_002",
+      "section": 1,
+      "start_time": 4.0,
+      "end_time": 8.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, wet asphalt reflecting violet and cyan neon signage (노래방, 편의점 24시), slow push in on KAI ONYX walking in dark techwear jacket, photorealistic 8k, 35mm grain. Lyric theme: '(Seoul to Taipei, we don't sleep)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png",
+      "start_frame": 96,
+      "end_frame": 192
+    },
+    {
+      "shot_id": "shot_003",
+      "section": 1,
+      "start_time": 8.0,
+      "end_time": 12.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, steam rising from street grates, KAI ONYX looking directly into camera with intense gaze, cinematic rim light, photorealistic 8k. Lyric theme: '(Turn it up, let's get it)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png",
+      "start_frame": 192,
+      "end_frame": 288
+    },
+    {
+      "shot_id": "shot_004",
+      "section": 1,
+      "start_time": 12.0,
+      "end_time": 15.0,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_speed_ramp_dive"
+      },
+      "prompt": "Cinematic 8K MV transition shot, FPV fast speed ramp camera diving down the neon-lit Seoul subway entrance staircase (지하철 2호선 입구), rushing down concrete stairs into the dark underground tunnel, motion blur, cyan and magenta lighting, seamless transition into subway tracks, photorealistic, 35mm film grain. Lyric theme: '(Dark piano melody, crisp hi-hat rolls - Diving into Underground)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png",
+      "start_frame": 288,
+      "end_frame": 360
+    },
+    {
+      "shot_id": "shot_005",
+      "section": 2,
+      "start_time": 15.0,
+      "end_time": 19.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV drop shot, camera emerging onto the Seoul underground subway tracks and platform as 808 sub-bass drops heavily, protagonist KAI ONYX standing on the tracks rapping fiercely into camera with dramatic rim lighting, dark trap aesthetics, volumetric mist, photorealistic 8k, 35mm lens. Lyric theme: '새벽 세 시, 어둠 속에 번지는 smoke'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png",
+      "start_frame": 360,
+      "end_frame": 456
+    },
+    {
+      "shot_id": "shot_006",
+      "section": 2,
+      "start_time": 19.0,
+      "end_time": 23.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, low-angle hero perspective along subway rails, exposed high-voltage cables on concrete walls, KAI ONYX rapping with bass shake micro-vibrations, photorealistic 8k. Lyric theme: '내 발밑에 깔린 도시, 절대 안 멈춰'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png",
+      "start_frame": 456,
+      "end_frame": 552
+    },
+    {
+      "shot_id": "shot_007",
+      "section": 2,
+      "start_time": 23.0,
+      "end_time": 27.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, industrial corridor tracking shot, silver necklace and techwear reflective straps glowing under cold fluorescent lights, confident performance, photorealistic 8k. Lyric theme: '從台北一路殺到首爾的街頭, 絕不會回頭'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png",
+      "start_frame": 552,
+      "end_frame": 648
+    },
+    {
+      "shot_id": "shot_008",
+      "section": 2,
+      "start_time": 27.0,
+      "end_time": 30.0,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "macro_85mm",
+        "movement": "crash_zoom_in"
+      },
+      "prompt": "Cinematic 8K MV extreme close-up transition shot, camera crash zooms aggressively into protagonist KAI ONYX's sharp eye and intense killer gaze, pupil reflecting the cool blue neon of the subway platform, high-contrast cinematic lighting, photorealistic 8k, 85mm macro lens. Lyric theme: 'All eyes on me, Ready for the fire, here we go!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png",
+      "start_frame": 648,
+      "end_frame": 720
+    },
+    {
+      "shot_id": "shot_009",
+      "section": 3,
+      "start_time": 30.0,
+      "end_time": 34.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_whip_pull_back"
+      },
+      "prompt": "Cinematic 8K MV match cut transition shot, pupil reflection instantly flashes and shifts to rotating crimson red emergency alert beacons, camera rapidly whips and pulls back from KAI ONYX's intense eye into a wide shot of the dark underground cyberpunk server vault pulsing with red warning alarm lights, photorealistic 8k, 24mm lens. Lyric theme: '숨이 턱 끝까지 차올라도'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png",
+      "start_frame": 720,
+      "end_frame": 816
+    },
+    {
+      "shot_id": "shot_010",
+      "section": 3,
+      "start_time": 34.0,
+      "end_time": 38.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, server racks pulsing with cyan data LEDs under rotating crimson alert beacons, KAI ONYX performing with intense rising energy, photorealistic 8k. Lyric theme: '절대로 물러서지 않아, we glow'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png",
+      "start_frame": 816,
+      "end_frame": 912
+    },
+    {
+      "shot_id": "shot_011",
+      "section": 3,
+      "start_time": 38.0,
+      "end_time": 42.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, rapid whip pan with accelerating snare drum roll, holographic code countdown on terminal screens, high-tension atmosphere, photorealistic 8k. Lyric theme: '倒數三秒, 撕開黑夜的鎖'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png",
+      "start_frame": 912,
+      "end_frame": 1008
+    },
+    {
+      "shot_id": "shot_012",
+      "section": 3,
+      "start_time": 42.0,
+      "end_time": 45.0,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "explosive_punch_forward"
+      },
+      "prompt": "Cinematic 8K MV transition shot, in the red alert server room as countdown hits zero, KAI ONYX delivers line 'Now witness the heat, let it blow!' and slams control console, screens burst into blinding white energy shockwave explosion flare, camera punches forward into blinding light, seamless transition into fire dome, photorealistic 8k, 24mm lens. Lyric theme: 'Now witness the heat, let it blow!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png",
+      "start_frame": 1008,
+      "end_frame": 1080
+    },
+    {
+      "shot_id": "shot_013",
+      "section": 4,
+      "start_time": 45.0,
+      "end_time": 49.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "ultra_wide_18mm",
+        "movement": "crane_jib_up_fire_burst"
+      },
+      "prompt": "Cinematic 8K MV explosion drop shot, blinding shockwave erupts seamlessly into massive towering pillars of vertical fire and golden sparks inside the industrial throne dome as Chorus 1 brass drops heavily, protagonist KAI ONYX commanding the throne surrounded by armored vehicles and blazing superbikes, camera jibs up dynamically, photorealistic 8k, 18mm lens. Lyric theme: 'We run this city! We run this throne!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png",
+      "start_frame": 1080,
+      "end_frame": 1176
+    },
+    {
+      "shot_id": "shot_014",
+      "section": 4,
+      "start_time": 49.0,
+      "end_time": 53.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "ultra_wide_18mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, dynamic 360 orbit around KAI ONYX standing atop armored vehicle, blazing pyro flames and gold sparks flying, massive energy explosion, photorealistic 8k. Lyric theme: '踩碎所有質疑, king on the zone!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png",
+      "start_frame": 1176,
+      "end_frame": 1272
+    },
+    {
+      "shot_id": "shot_015",
+      "section": 4,
+      "start_time": 53.0,
+      "end_time": 57.0,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "ultra_wide_18mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, superbike fleet headlights piercing through dense smoke, KAI ONYX commanding the entire dome with intense authority, photorealistic 8k. Lyric theme: 'We run this city! Take the crown home!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png",
+      "start_frame": 1272,
+      "en

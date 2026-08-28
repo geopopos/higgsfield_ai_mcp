@@ -1,0 +1,39 @@
+{
+  "characters": [
+    {
+      "id": "character_main",
+      "name": "KAI ONYX (主角 4 視圖)",
+      "prompt": "Character concept sheet, 4-view turnaround (front, side, 3/4, back) of KAI ONYX, dark Korean trap and UK drill techwear streetwear aesthetic, 8k",
+      "output_filename": "character_main_sheet.png"
+    },
+    {
+      "id": "character_hero_closeup",
+      "name": "KAI ONYX (85mm 主唱電影級特寫)",
+      "prompt": "Cinematic 8K hero close-up portrait of KAI ONYX holding microphone close to lips, fierce rap performance, 85mm shallow depth of field, rain droplets, neon bokeh, 8k",
+      "output_filename": "character_hero_closeup.png"
+    }
+  ],
+  "locations": [
+    {
+      "id": "location_sec_1",
+      "name": "Section 1: 首爾雨夜霓虹巷弄 (Intro)",
+      "output_filename": "location_sec_1.png",
+      "prompt": "Seoul rainy alleyway neon streetscape"
+    },
+    {
+      "id": "location_sec_2",
+      "name": "Section 2: 地下地鐵軌道與月台 (Verse 1)",
+      "output_filename": "location_sec_2.png",
+      "prompt": "Seoul underground subway railway tunnel"
+    },
+    {
+      "id": "location_sec_3",
+      "name": "Section 3: 警示紅光伺服器機房 (Pre-Chorus)",
+      "output_filename": "location_sec_3.png",
+      "prompt": "Underground cyber server vault red alert"
+    },
+    {
+      "id": "location_sec_4",
+      "name": "Section 4: 工業穹頂火焰王座 (Chorus 1)",
+      "output_filename": "location_sec_4.png",
+    

@@ -1,0 +1,249 @@
+{
+  "style_preset": "cyberpunk_kai_oxyn",
+  "total_shots": 15,
+  "bpm": 120.0,
+  "fps": 24,
+  "duration_sec": 60.0,
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "section": 1,
+      "start_time": 0.0,
+      "end_time": 6.0,
+      "start_frame": 0,
+      "end_frame": 144,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_002",
+      "section": 1,
+      "start_time": 6.0,
+      "end_time": 12.0,
+      "start_frame": 144,
+      "end_frame": 288,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'Cybernetic dreams inside a heart of beat'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_003",
+      "section": 1,
+      "start_time": 12.0,
+      "end_time": 15.0,
+      "start_frame": 288,
+      "end_frame": 360,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_004",
+      "section": 2,
+      "start_time": 15.0,
+      "end_time": 19.0,
+      "start_frame": 360,
+      "end_frame": 456,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, orbit_3d camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_005",
+      "section": 2,
+      "start_time": 19.0,
+      "end_time": 23.0,
+      "start_frame": 456,
+      "end_frame": 552,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, orbit_3d camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_006",
+      "section": 2,
+      "start_time": 23.0,
+      "end_time": 27.0,
+      "start_frame": 552,
+      "end_frame": 648,
+      "duration_sec": 4.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, orbit_3d camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_007",
+      "section": 2,
+      "start_time": 27.0,
+      "end_time": 30.0,
+      "start_frame": 648,
+      "end_frame": 720,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "portrait_85mm",
+        "movement": "orbit_3d"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, orbit_3d camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_008",
+      "section": 3,
+      "start_time": 30.0,
+      "end_time": 33.0,
+      "start_frame": 720,
+      "end_frame": 792,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_zoom_drop"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, fast_zoom_drop camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_009",
+      "section": 3,
+      "start_time": 33.0,
+      "end_time": 36.0,
+      "start_frame": 792,
+      "end_frame": 864,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_zoom_drop"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, fast_zoom_drop camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_010",
+      "section": 3,
+      "start_time": 36.0,
+      "end_time": 39.0,
+      "start_frame": 864,
+      "end_frame": 936,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_zoom_drop"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, fast_zoom_drop camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_011",
+      "section": 3,
+      "start_time": 39.0,
+      "end_time": 42.0,
+      "start_frame": 936,
+      "end_frame": 1008,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_zoom_drop"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, fast_zoom_drop camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_012",
+      "section": 3,
+      "start_time": 42.0,
+      "end_time": 45.0,
+      "start_frame": 1008,
+      "end_frame": 1080,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "wide_24mm",
+        "movement": "fast_zoom_drop"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, fast_zoom_drop camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_013",
+      "section": 4,
+      "start_time": 45.0,
+      "end_time": 51.0,
+      "start_frame": 1080,
+      "end_frame": 1224,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    },
+    {
+      "shot_id": "shot_014",
+      "section": 4,
+      "start_time": 51.0,
+      "end_time": 57.0,
+      "start_frame": 1224,
+      "end_frame": 1368,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    },
+    {
+      "shot_id": "shot_015",
+      "section": 4,
+      "start_time": 57.0,
+      "end_time": 60.0,
+      "start_frame": 1368,
+      "end_frame": 1440,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, cyberpunk_kai_oxyn style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    }
+  ]
+}

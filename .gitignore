@@ -55,3 +55,21 @@ htmlcov/
 # User-specific configs
 claude_desktop_config.json
 .claude/
+
+# Binaries & Bundled Tools
+blender/
+*.msi
+*.exe
+*.dll
+*.pdb
+*.lib
+
+# Output & Cache
+temp/
+scratch/
+output/
+runtime_director_test/
+*.mp4
+*.mov
+*.zip
+*.tar.gz

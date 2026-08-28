@@ -1,0 +1,126 @@
+{
+  "characters": [
+    {
+      "id": "character_main",
+      "name": "Main Singer / Protagonist",
+      "prompt": "Character concept sheet, 4-view turnaround (front, side, 3/4, back), Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic aesthetic, futuristic outfit, highly detailed, 8k",
+      "output_filename": "character_main_sheet.png"
+    }
+  ],
+  "locations": [
+    {
+      "id": "location_sec_1",
+      "name": "Environment for Section 1",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_1.png"
+    },
+    {
+      "id": "location_sec_2",
+      "name": "Environment for Section 2",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_2.png"
+    },
+    {
+      "id": "location_sec_3",
+      "name": "Environment for Section 3",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_3.png"
+    },
+    {
+      "id": "location_sec_4",
+      "name": "Environment for Section 4",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_4.png"
+    },
+    {
+      "id": "location_sec_5",
+      "name": "Environment for Section 5",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_5.png"
+    },
+    {
+      "id": "location_sec_6",
+      "name": "Environment for Section 6",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_6.png"
+    },
+    {
+      "id": "location_sec_7",
+      "name": "Environment for Section 7",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_7.png"
+    },
+    {
+      "id": "location_sec_8",
+      "name": "Environment for Section 8",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_8.png"
+    },
+    {
+      "id": "location_sec_9",
+      "name": "Environment for Section 9",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_9.png"
+    },
+    {
+      "id": "location_sec_10",
+      "name": "Environment for Section 10",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_10.png"
+    },
+    {
+      "id": "location_sec_11",
+      "name": "Environment for Section 11",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_11.png"
+    },
+    {
+      "id": "location_sec_12",
+      "name": "Environment for Section 12",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_12.png"
+    },
+    {
+      "id": "location_sec_13",
+      "name": "Environment for Section 13",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_13.png"
+    },
+    {
+      "id": "location_sec_14",
+      "name": "Environment for Section 14",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_14.png"
+    },
+    {
+      "id": "location_sec_15",
+      "name": "Environment for Section 15",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_15.png"
+    },
+    {
+      "id": "location_sec_16",
+      "name": "Environment for Section 16",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_16.png"
+    },
+    {
+      "id": "location_sec_17",
+      "name": "Environment for Section 17",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_17.png"
+    },
+    {
+      "id": "location_sec_18",
+      "name": "Environment for Section 18",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_18.png"
+    },
+    {
+      "id": "location_sec_19",
+      "name": "Environment for Section 19",
+      "prompt": "Cinematic location keyframe, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_19.png"
+    }
+  ]
+}

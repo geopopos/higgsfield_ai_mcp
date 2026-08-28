@@ -1,0 +1,31 @@
+# Auto-MV Pipeline Global Configuration
+
+project:
+  name: "Auto-MV Pipeline"
+  fps: 24
+  resolution:
+    width: 1920
+    height: 1080
+  output_dir: "./output"
+  temp_dir: "./temp"
+
+paths:
+  blender_executable: "blender" # Override with absolute path if needed
+  audio_dir: "./assets/audio"
+  characters_dir: "./zijin_night/03_storyboard/characters"
+  locations_dir: "./zijin_night/03_storyboard/locations"
+  previs_dir: "./temp/previs"
+  renders_dir: "./temp/renders"
+
+audio_analysis:
+  hop_length: 512
+  sr: 22050
+
+llm:
+  provider: "antigravity_gemini" # Native Antigravity Gemini integration
+  model: "gemini-3.6-flash"
+
+api_keys:
+  higgsfield_api_key: "${HF_API_KEY}"
+  higgsfield_secret: "${HF_SECRET}"
+  image_gen_api_key: "${FAL_KEY}"

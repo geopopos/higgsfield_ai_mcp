@@ -1,0 +1,3672 @@
+{
+  "audio_file": "d:\\antigravity project\\ai製片工廠\\midnight_glitch\\02_audio\\master_track.wav",
+  "duration_sec": 126.68,
+  "fps": 24,
+  "bpm": 143.55,
+  "time_signature": "4/4",
+  "total_beats": 300,
+  "beats": [
+    {
+      "beat_index": 1,
+      "time": 0.07,
+      "frame": 2,
+      "bar": 1,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 2,
+      "time": 0.488,
+      "frame": 12,
+      "bar": 1,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 3,
+      "time": 0.906,
+      "frame": 22,
+      "bar": 1,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 4,
+      "time": 1.324,
+      "frame": 32,
+      "bar": 1,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 5,
+      "time": 1.741,
+      "frame": 42,
+      "bar": 2,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 6,
+      "time": 2.159,
+      "frame": 52,
+      "bar": 2,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 7,
+      "time": 2.577,
+      "frame": 62,
+      "bar": 2,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 8,
+      "time": 2.995,
+      "frame": 72,
+      "bar": 2,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 9,
+      "time": 3.437,
+      "frame": 82,
+      "bar": 3,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 10,
+      "time": 3.855,
+      "frame": 93,
+      "bar": 3,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 11,
+      "time": 4.272,
+      "frame": 103,
+      "bar": 3,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 12,
+      "time": 4.714,
+      "frame": 113,
+      "bar": 3,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 13,
+      "time": 5.132,
+      "frame": 123,
+      "bar": 4,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 14,
+      "time": 5.55,
+      "frame": 133,
+      "bar": 4,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 15,
+      "time": 5.968,
+      "frame": 143,
+      "bar": 4,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 16,
+      "time": 6.409,
+      "frame": 154,
+      "bar": 4,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 17,
+      "time": 6.803,
+      "frame": 163,
+      "bar": 5,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 18,
+      "time": 7.221,
+      "frame": 173,
+      "bar": 5,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 19,
+      "time": 7.639,
+      "frame": 183,
+      "bar": 5,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 20,
+      "time": 8.057,
+      "frame": 193,
+      "bar": 5,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 21,
+      "time": 8.475,
+      "frame": 203,
+      "bar": 6,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 22,
+      "time": 8.916,
+      "frame": 214,
+      "bar": 6,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 23,
+      "time": 9.358,
+      "frame": 225,
+      "bar": 6,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 24,
+      "time": 9.776,
+      "frame": 235,
+      "bar": 6,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 25,
+      "time": 10.194,
+      "frame": 245,
+      "bar": 7,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 26,
+      "time": 10.612,
+      "frame": 255,
+      "bar": 7,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 27,
+      "time": 11.053,
+      "frame": 265,
+      "bar": 7,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 28,
+      "time": 11.471,
+      "frame": 275,
+      "bar": 7,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 29,
+      "time": 11.889,
+      "frame": 285,
+      "bar": 8,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 30,
+      "time": 12.307,
+      "frame": 295,
+      "bar": 8,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 31,
+      "time": 12.725,
+      "frame": 305,
+      "bar": 8,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 32,
+      "time": 13.142,
+      "frame": 315,
+      "bar": 8,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 33,
+      "time": 13.584,
+      "frame": 326,
+      "bar": 9,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 34,
+      "time": 14.002,
+      "frame": 336,
+      "bar": 9,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 35,
+      "time": 14.42,
+      "frame": 346,
+      "bar": 9,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 36,
+      "time": 14.838,
+      "frame": 356,
+      "bar": 9,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 37,
+      "time": 15.256,
+      "frame": 366,
+      "bar": 10,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 38,
+      "time": 15.673,
+      "frame": 376,
+      "bar": 10,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 39,
+      "time": 16.091,
+      "frame": 386,
+      "bar": 10,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 40,
+      "time": 16.533,
+      "frame": 397,
+      "bar": 10,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 41,
+      "time": 16.951,
+      "frame": 407,
+      "bar": 11,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 42,
+      "time": 17.369,
+      "frame": 417,
+      "bar": 11,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 43,
+      "time": 17.786,
+      "frame": 427,
+      "bar": 11,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 44,
+      "time": 18.204,
+      "frame": 437,
+      "bar": 11,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 45,
+      "time": 18.646,
+      "frame": 447,
+      "bar": 12,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 46,
+      "time": 19.064,
+      "frame": 458,
+      "bar": 12,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 47,
+      "time": 19.482,
+      "frame": 468,
+      "bar": 12,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 48,
+      "time": 19.9,
+      "frame": 478,
+      "bar": 12,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 49,
+      "time": 20.341,
+      "frame": 488,
+      "bar": 13,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 50,
+      "time": 20.759,
+      "frame": 498,
+      "bar": 13,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 51,
+      "time": 21.153,
+      "frame": 508,
+      "bar": 13,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 52,
+      "time": 21.595,
+      "frame": 518,
+      "bar": 13,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 53,
+      "time": 22.013,
+      "frame": 528,
+      "bar": 14,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 54,
+      "time": 22.454,
+      "frame": 539,
+      "bar": 14,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 55,
+      "time": 22.872,
+      "frame": 549,
+      "bar": 14,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 56,
+      "time": 23.29,
+      "frame": 559,
+      "bar": 14,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 57,
+      "time": 23.708,
+      "frame": 569,
+      "bar": 15,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 58,
+      "time": 24.126,
+      "frame": 579,
+      "bar": 15,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 59,
+      "time": 24.543,
+      "frame": 589,
+      "bar": 15,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 60,
+      "time": 24.985,
+      "frame": 600,
+      "bar": 15,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 61,
+      "time": 25.403,
+      "frame": 610,
+      "bar": 16,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 62,
+      "time": 25.821,
+      "frame": 620,
+      "bar": 16,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 63,
+      "time": 26.239,
+      "frame": 630,
+      "bar": 16,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 64,
+      "time": 26.657,
+      "frame": 640,
+      "bar": 16,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 65,
+      "time": 27.074,
+      "frame": 650,
+      "bar": 17,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 66,
+      "time": 27.516,
+      "frame": 660,
+      "bar": 17,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 67,
+      "time": 27.934,
+      "frame": 670,
+      "bar": 17,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 68,
+      "time": 28.352,
+      "frame": 680,
+      "bar": 17,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 69,
+      "time": 28.77,
+      "frame": 690,
+      "bar": 18,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 70,
+      "time": 29.211,
+      "frame": 701,
+      "bar": 18,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 71,
+      "time": 29.629,
+      "frame": 711,
+      "bar": 18,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 72,
+      "time": 30.047,
+      "frame": 721,
+      "bar": 18,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 73,
+      "time": 30.465,
+      "frame": 731,
+      "bar": 19,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 74,
+      "time": 30.906,
+      "frame": 742,
+      "bar": 19,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 75,
+      "time": 31.3,
+      "frame": 751,
+      "bar": 19,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 76,
+      "time": 31.742,
+      "frame": 762,
+      "bar": 19,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 77,
+      "time": 32.136,
+      "frame": 771,
+      "bar": 20,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 78,
+      "time": 32.578,
+      "frame": 782,
+      "bar": 20,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 79,
+      "time": 32.996,
+      "frame": 792,
+      "bar": 20,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 80,
+      "time": 33.414,
+      "frame": 802,
+      "bar": 20,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 81,
+      "time": 33.855,
+      "frame": 813,
+      "bar": 21,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 82,
+      "time": 34.273,
+      "frame": 823,
+      "bar": 21,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 83,
+      "time": 34.691,
+      "frame": 833,
+      "bar": 21,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 84,
+      "time": 35.109,
+      "frame": 843,
+      "bar": 21,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 85,
+      "time": 35.527,
+      "frame": 853,
+      "bar": 22,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 86,
+      "time": 35.968,
+      "frame": 863,
+      "bar": 22,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 87,
+      "time": 36.386,
+      "frame": 873,
+      "bar": 22,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 88,
+      "time": 36.804,
+      "frame": 883,
+      "bar": 22,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 89,
+      "time": 37.222,
+      "frame": 893,
+      "bar": 23,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 90,
+      "time": 37.64,
+      "frame": 903,
+      "bar": 23,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 91,
+      "time": 38.081,
+      "frame": 914,
+      "bar": 23,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 92,
+      "time": 38.499,
+      "frame": 924,
+      "bar": 23,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 93,
+      "time": 38.917,
+      "frame": 934,
+      "bar": 24,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 94,
+      "time": 39.358,
+      "frame": 945,
+      "bar": 24,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 95,
+      "time": 39.776,
+      "frame": 955,
+      "bar": 24,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 96,
+      "time": 40.194,
+      "frame": 965,
+      "bar": 24,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 97,
+      "time": 40.612,
+      "frame": 975,
+      "bar": 25,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 98,
+      "time": 41.03,
+      "frame": 985,
+      "bar": 25,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 99,
+      "time": 41.448,
+      "frame": 995,
+      "bar": 25,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 100,
+      "time": 41.889,
+      "frame": 1005,
+      "bar": 25,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 101,
+      "time": 42.307,
+      "frame": 1015,
+      "bar": 26,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 102,
+      "time": 42.725,
+      "frame": 1025,
+      "bar": 26,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 103,
+      "time": 43.143,
+      "frame": 1035,
+      "bar": 26,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 104,
+      "time": 43.537,
+      "frame": 1045,
+      "bar": 26,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 105,
+      "time": 43.932,
+      "frame": 1054,
+      "bar": 27,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 106,
+      "time": 44.397,
+      "frame": 1066,
+      "bar": 27,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 107,
+      "time": 44.838,
+      "frame": 1076,
+      "bar": 27,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 108,
+      "time": 45.256,
+      "frame": 1086,
+      "bar": 27,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 109,
+      "time": 45.674,
+      "frame": 1096,
+      "bar": 28,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 110,
+      "time": 46.092,
+      "frame": 1106,
+      "bar": 28,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 111,
+      "time": 46.51,
+      "frame": 1116,
+      "bar": 28,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 112,
+      "time": 46.951,
+      "frame": 1127,
+      "bar": 28,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 113,
+      "time": 47.369,
+      "frame": 1137,
+      "bar": 29,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 114,
+      "time": 47.787,
+      "frame": 1147,
+      "bar": 29,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 115,
+      "time": 48.205,
+      "frame": 1157,
+      "bar": 29,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 116,
+      "time": 48.646,
+      "frame": 1167,
+      "bar": 29,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 117,
+      "time": 49.041,
+      "frame": 1177,
+      "bar": 30,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 118,
+      "time": 49.459,
+      "frame": 1187,
+      "bar": 30,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 119,
+      "time": 49.9,
+      "frame": 1198,
+      "bar": 30,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 120,
+      "time": 50.318,
+      "frame": 1208,
+      "bar": 30,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 121,
+      "time": 50.736,
+      "frame": 1218,
+      "bar": 31,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 122,
+      "time": 51.177,
+      "frame": 1228,
+      "bar": 31,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 123,
+      "time": 51.595,
+      "frame": 1238,
+      "bar": 31,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 124,
+      "time": 52.013,
+      "frame": 1248,
+      "bar": 31,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 125,
+      "time": 52.454,
+      "frame": 1259,
+      "bar": 32,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 126,
+      "time": 52.872,
+      "frame": 1269,
+      "bar": 32,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 127,
+      "time": 53.29,
+      "frame": 1279,
+      "bar": 32,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 128,
+      "time": 53.708,
+      "frame": 1289,
+      "bar": 32,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 129,
+      "time": 54.126,
+      "frame": 1299,
+      "bar": 33,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 130,
+      "time": 54.567,
+      "frame": 1310,
+      "bar": 33,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 131,
+      "time": 54.985,
+      "frame": 1320,
+      "bar": 33,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 132,
+      "time": 55.403,
+      "frame": 1330,
+      "bar": 33,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 133,
+      "time": 55.821,
+      "frame": 1340,
+      "bar": 34,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 134,
+      "time": 56.239,
+      "frame": 1350,
+      "bar": 34,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 135,
+      "time": 56.657,
+      "frame": 1360,
+      "bar": 34,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 136,
+      "time": 57.075,
+      "frame": 1370,
+      "bar": 34,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 137,
+      "time": 57.516,
+      "frame": 1380,
+      "bar": 35,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 138,
+      "time": 57.934,
+      "frame": 1390,
+      "bar": 35,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 139,
+      "time": 58.352,
+      "frame": 1400,
+      "bar": 35,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 140,
+      "time": 58.77,
+      "frame": 1410,
+      "bar": 35,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 141,
+      "time": 59.211,
+      "frame": 1421,
+      "bar": 36,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 142,
+      "time": 59.629,
+      "frame": 1431,
+      "bar": 36,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 143,
+      "time": 60.047,
+      "frame": 1441,
+      "bar": 36,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 144,
+      "time": 60.465,
+      "frame": 1451,
+      "bar": 36,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 145,
+      "time": 60.883,
+      "frame": 1461,
+      "bar": 37,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 146,
+      "time": 61.324,
+      "frame": 1472,
+      "bar": 37,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 147,
+      "time": 61.742,
+      "frame": 1482,
+      "bar": 37,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 148,
+      "time": 62.16,
+      "frame": 1492,
+      "bar": 37,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 149,
+      "time": 62.578,
+      "frame": 1502,
+      "bar": 38,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 150,
+      "time": 62.996,
+      "frame": 1512,
+      "bar": 38,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 151,
+      "time": 63.437,
+      "frame": 1522,
+      "bar": 38,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 152,
+      "time": 63.855,
+      "frame": 1533,
+      "bar": 38,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 153,
+      "time": 64.273,
+      "frame": 1543,
+      "bar": 39,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 154,
+      "time": 64.691,
+      "frame": 1553,
+      "bar": 39,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 155,
+      "time": 65.132,
+      "frame": 1563,
+      "bar": 39,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 156,
+      "time": 65.527,
+      "frame": 1573,
+      "bar": 39,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 157,
+      "time": 65.968,
+      "frame": 1583,
+      "bar": 40,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 158,
+      "time": 66.386,
+      "frame": 1593,
+      "bar": 40,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 159,
+      "time": 66.804,
+      "frame": 1603,
+      "bar": 40,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 160,
+      "time": 67.222,
+      "frame": 1613,
+      "bar": 40,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 161,
+      "time": 67.64,
+      "frame": 1623,
+      "bar": 41,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 162,
+      "time": 68.081,
+      "frame": 1634,
+      "bar": 41,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 163,
+      "time": 68.499,
+      "frame": 1644,
+      "bar": 41,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 164,
+      "time": 68.917,
+      "frame": 1654,
+      "bar": 41,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 165,
+      "time": 69.335,
+      "frame": 1664,
+      "bar": 42,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 166,
+      "time": 69.753,
+      "frame": 1674,
+      "bar": 42,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 167,
+      "time": 70.194,
+      "frame": 1685,
+      "bar": 42,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 168,
+      "time": 70.612,
+      "frame": 1695,
+      "bar": 42,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 169,
+      "time": 71.03,
+      "frame": 1705,
+      "bar": 43,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 170,
+      "time": 71.448,
+      "frame": 1715,
+      "bar": 43,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 171,
+      "time": 71.889,
+      "frame": 1725,
+      "bar": 43,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 172,
+      "time": 72.307,
+      "frame": 1735,
+      "bar": 43,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 173,
+      "time": 72.725,
+      "frame": 1745,
+      "bar": 44,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 174,
+      "time": 73.143,
+      "frame": 1755,
+      "bar": 44,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 175,
+      "time": 73.561,
+      "frame": 1765,
+      "bar": 44,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 176,
+      "time": 73.979,
+      "frame": 1775,
+      "bar": 44,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 177,
+      "time": 74.397,
+      "frame": 1786,
+      "bar": 45,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 178,
+      "time": 74.838,
+      "frame": 1796,
+      "bar": 45,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 179,
+      "time": 75.256,
+      "frame": 1806,
+      "bar": 45,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 180,
+      "time": 75.674,
+      "frame": 1816,
+      "bar": 45,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 181,
+      "time": 76.092,
+      "frame": 1826,
+      "bar": 46,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 182,
+      "time": 76.51,
+      "frame": 1836,
+      "bar": 46,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 183,
+      "time": 76.951,
+      "frame": 1847,
+      "bar": 46,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 184,
+      "time": 77.369,
+      "frame": 1857,
+      "bar": 46,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 185,
+      "time": 77.787,
+      "frame": 1867,
+      "bar": 47,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 186,
+      "time": 78.228,
+      "frame": 1877,
+      "bar": 47,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 187,
+      "time": 78.646,
+      "frame": 1888,
+      "bar": 47,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 188,
+      "time": 79.064,
+      "frame": 1898,
+      "bar": 47,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 189,
+      "time": 79.482,
+      "frame": 1908,
+      "bar": 48,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 190,
+      "time": 79.9,
+      "frame": 1918,
+      "bar": 48,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 191,
+      "time": 80.341,
+      "frame": 1928,
+      "bar": 48,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 192,
+      "time": 80.759,
+      "frame": 1938,
+      "bar": 48,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 193,
+      "time": 81.177,
+      "frame": 1948,
+      "bar": 49,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 194,
+      "time": 81.618,
+      "frame": 1959,
+      "bar": 49,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 195,
+      "time": 82.036,
+      "frame": 1969,
+      "bar": 49,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 196,
+      "time": 82.454,
+      "frame": 1979,
+      "bar": 49,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 197,
+      "time": 82.872,
+      "frame": 1989,
+      "bar": 50,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 198,
+      "time": 83.29,
+      "frame": 1999,
+      "bar": 50,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 199,
+      "time": 83.708,
+      "frame": 2009,
+      "bar": 50,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 200,
+      "time": 84.126,
+      "frame": 2019,
+      "bar": 50,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 201,
+      "time": 84.544,
+      "frame": 2029,
+      "bar": 51,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 202,
+      "time": 84.962,
+      "frame": 2039,
+      "bar": 51,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 203,
+      "time": 85.38,
+      "frame": 2049,
+      "bar": 51,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 204,
+      "time": 85.821,
+      "frame": 2060,
+      "bar": 51,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 205,
+      "time": 86.239,
+      "frame": 2070,
+      "bar": 52,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 206,
+      "time": 86.657,
+      "frame": 2080,
+      "bar": 52,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 207,
+      "time": 87.075,
+      "frame": 2090,
+      "bar": 52,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 208,
+      "time": 87.516,
+      "frame": 2100,
+      "bar": 52,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 209,
+      "time": 87.934,
+      "frame": 2110,
+      "bar": 53,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 210,
+      "time": 88.352,
+      "frame": 2120,
+      "bar": 53,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 211,
+      "time": 88.77,
+      "frame": 2130,
+      "bar": 53,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 212,
+      "time": 89.211,
+      "frame": 2141,
+      "bar": 53,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 213,
+      "time": 89.629,
+      "frame": 2151,
+      "bar": 54,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 214,
+      "time": 90.047,
+      "frame": 2161,
+      "bar": 54,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 215,
+      "time": 90.465,
+      "frame": 2171,
+      "bar": 54,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 216,
+      "time": 90.883,
+      "frame": 2181,
+      "bar": 54,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 217,
+      "time": 91.301,
+      "frame": 2191,
+      "bar": 55,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 218,
+      "time": 91.719,
+      "frame": 2201,
+      "bar": 55,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 219,
+      "time": 92.137,
+      "frame": 2211,
+      "bar": 55,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 220,
+      "time": 92.578,
+      "frame": 2222,
+      "bar": 55,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 221,
+      "time": 92.996,
+      "frame": 2232,
+      "bar": 56,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 222,
+      "time": 93.414,
+      "frame": 2242,
+      "bar": 56,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 223,
+      "time": 93.855,
+      "frame": 2253,
+      "bar": 56,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 224,
+      "time": 94.273,
+      "frame": 2263,
+      "bar": 56,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 225,
+      "time": 94.691,
+      "frame": 2273,
+      "bar": 57,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 226,
+      "time": 95.109,
+      "frame": 2283,
+      "bar": 57,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 227,
+      "time": 95.527,
+      "frame": 2293,
+      "bar": 57,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 228,
+      "time": 95.968,
+      "frame": 2303,
+      "bar": 57,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 229,
+      "time": 96.386,
+      "frame": 2313,
+      "bar": 58,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 230,
+      "time": 96.804,
+      "frame": 2323,
+      "bar": 58,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 231,
+      "time": 97.222,
+      "frame": 2333,
+      "bar": 58,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 232,
+      "time": 97.64,
+      "frame": 2343,
+      "bar": 58,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 233,
+      "time": 98.081,
+      "frame": 2354,
+      "bar": 59,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 234,
+      "time": 98.499,
+      "frame": 2364,
+      "bar": 59,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 235,
+      "time": 98.917,
+      "frame": 2374,
+      "bar": 59,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 236,
+      "time": 99.335,
+      "frame": 2384,
+      "bar": 59,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 237,
+      "time": 99.753,
+      "frame": 2394,
+      "bar": 60,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 238,
+      "time": 100.194,
+      "frame": 2405,
+      "bar": 60,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 239,
+      "time": 100.612,
+      "frame": 2415,
+      "bar": 60,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 240,
+      "time": 101.03,
+      "frame": 2425,
+      "bar": 60,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 241,
+      "time": 101.448,
+      "frame": 2435,
+      "bar": 61,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 242,
+      "time": 101.889,
+      "frame": 2445,
+      "bar": 61,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 243,
+      "time": 102.307,
+      "frame": 2455,
+      "bar": 61,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 244,
+      "time": 102.725,
+      "frame": 2465,
+      "bar": 61,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 245,
+      "time": 103.143,
+      "frame": 2475,
+      "bar": 62,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 246,
+      "time": 103.561,
+      "frame": 2485,
+      "bar": 62,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 247,
+      "time": 103.979,
+      "frame": 2495,
+      "bar": 62,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 248,
+      "time": 104.42,
+      "frame": 2506,
+      "bar": 62,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 249,
+      "time": 104.838,
+      "frame": 2516,
+      "bar": 63,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 250,
+      "time": 105.256,
+      "frame": 2526,
+      "bar": 63,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 251,
+      "time": 105.674,
+      "frame": 2536,
+      "bar": 63,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 252,
+      "time": 106.092,
+      "frame": 2546,
+      "bar": 63,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 253,
+      "time": 106.533,
+      "frame": 2557,
+      "bar": 64,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 254,
+      "time": 106.951,
+      "frame": 2567,
+      "bar": 64,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 255,
+      "time": 107.369,
+      "frame": 2577,
+      "bar": 64,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 256,
+      "time": 107.787,
+      "frame": 2587,
+      "bar": 64,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 257,
+      "time": 108.205,
+      "frame": 2597,
+      "bar": 65,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 258,
+      "time": 108.646,
+      "frame": 2608,
+      "bar": 65,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 259,
+      "time": 109.064,
+      "frame": 2618,
+      "bar": 65,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 260,
+      "time": 109.482,
+      "frame": 2628,
+      "bar": 65,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 261,
+      "time": 109.9,
+      "frame": 2638,
+      "bar": 66,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 262,
+      "time": 110.318,
+      "frame": 2648,
+      "bar": 66,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 263,
+      "time": 110.759,
+      "frame": 2658,
+      "bar": 66,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 264,
+      "time": 111.177,
+      "frame": 2668,
+      "bar": 66,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 265,
+      "time": 111.595,
+      "frame": 2678,
+      "bar": 67,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 266,
+      "time": 112.013,
+      "frame": 2688,
+      "bar": 67,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 267,
+      "time": 112.431,
+      "frame": 2698,
+      "bar": 67,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 268,
+      "time": 112.872,
+      "frame": 2709,
+      "bar": 67,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 269,
+      "time": 113.29,
+      "frame": 2719,
+      "bar": 68,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 270,
+      "time": 113.708,
+      "frame": 2729,
+      "bar": 68,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 271,
+      "time": 114.126,
+      "frame": 2739,
+      "bar": 68,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 272,
+      "time": 114.544,
+      "frame": 2749,
+      "bar": 68,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 273,
+      "time": 114.962,
+      "frame": 2759,
+      "bar": 69,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 274,
+      "time": 115.38,
+      "frame": 2769,
+      "bar": 69,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 275,
+      "time": 115.821,
+      "frame": 2780,
+      "bar": 69,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 276,
+      "time": 116.239,
+      "frame": 2790,
+      "bar": 69,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 277,
+      "time": 116.657,
+      "frame": 2800,
+      "bar": 70,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 278,
+      "time": 117.075,
+      "frame": 2810,
+      "bar": 70,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 279,
+      "time": 117.493,
+      "frame": 2820,
+      "bar": 70,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 280,
+      "time": 117.934,
+      "frame": 2830,
+      "bar": 70,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 281,
+      "time": 118.352,
+      "frame": 2840,
+      "bar": 71,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 282,
+      "time": 118.77,
+      "frame": 2850,
+      "bar": 71,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 283,
+      "time": 119.188,
+      "frame": 2861,
+      "bar": 71,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 284,
+      "time": 119.629,
+      "frame": 2871,
+      "bar": 71,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 285,
+      "time": 120.047,
+      "frame": 2881,
+      "bar": 72,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 286,
+      "time": 120.465,
+      "frame": 2891,
+      "bar": 72,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 287,
+      "time": 120.883,
+      "frame": 2901,
+      "bar": 72,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 288,
+      "time": 121.301,
+      "frame": 2911,
+      "bar": 72,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 289,
+      "time": 121.719,
+      "frame": 2921,
+      "bar": 73,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 290,
+      "time": 122.16,
+      "frame": 2932,
+      "bar": 73,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 291,
+      "time": 122.578,
+      "frame": 2942,
+      "bar": 73,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 292,
+      "time": 122.996,
+      "frame": 2952,
+      "bar": 73,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 293,
+      "time": 123.414,
+      "frame": 2962,
+      "bar": 74,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 294,
+      "time": 123.855,
+      "frame": 2973,
+      "bar": 74,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 295,
+      "time": 124.273,
+      "frame": 2983,
+      "bar": 74,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 296,
+      "time": 124.691,
+      "frame": 2993,
+      "bar": 74,
+      "beat_in_bar": 4
+    },
+    {
+      "beat_index": 297,
+      "time": 125.109,
+      "frame": 3003,
+      "bar": 75,
+      "beat_in_bar": 1
+    },
+    {
+      "beat_index": 298,
+      "time": 125.481,
+      "frame": 3012,
+      "bar": 75,
+      "beat_in_bar": 2
+    },
+    {
+      "beat_index": 299,
+      "time": 125.875,
+      "frame": 3021,
+      "bar": 75,
+      "beat_in_bar": 3
+    },
+    {
+      "beat_index": 300,
+      "time": 126.27,
+      "frame": 3030,
+      "bar": 75,
+      "beat_in_bar": 4
+    }
+  ],
+  "kick_onsets": [
+    0.07,
+    0.255,
+    0.418,
+    0.464,
+    0.673,
+    0.766,
+    0.906,
+    1.115,
+    1.324,
+    2.043,
+    2.159,
+    2.345,
+    2.554,
+    2.786,
+    2.879,
+    3.204,
+    3.413,
+    3.622,
+    3.738,
+    3.855,
+    4.04,
+    4.272,
+    4.481,
+    4.899,
+    5.108,
+    5.387,
+    5.55,
+    5.735,
+    5.898,
+    5.968,
+    6.153,
+    6.269,
+    6.594,
+    6.78,
+    7.105,
+    7.221,
+    7.43,
+    7.709,
+    7.825,
+    8.057,
+    8.499,
+    8.8,
+    8.916,
+    9.033,
+    9.125,
+    9.334,
+    9.451,
+    9.567,
+    9.752,
+    10.194
+  ],
+  "snare_onsets": [
+    0.07,
+    0.255,
+    0.418,
+    0.464,
+    0.673,
+    0.766,
+    0.906,
+    1.115,
+    1.324,
+    2.043,
+    2.159,
+    2.345,
+    2.554,
+    2.786,
+    2.879,
+    3.204,
+    3.413,
+    3.622,
+    3.738,
+    3.855,
+    4.04,
+    4.272,
+    4.481,
+    4.899,
+    5.108,
+    5.387,
+    5.55,
+    5.735,
+    5.898,
+    5.968,
+    6.153,
+    6.269,
+    6.594,
+    6.78,
+    7.105,
+    7.221,
+    7.43,
+    7.709,
+    7.825,
+    8.057,
+    8.499,
+    8.8,
+    8.916,
+    9.033,
+    9.125,
+    9.334,
+    9.451,
+    9.567,
+    9.752,
+    10.194
+  ],
+  "energy_sections": [
+    {
+      "section_index": 1,
+      "start": 0.0,
+      "end": 15.0,
+      "energy": 0.41,
+      "label": "Verse / Intro"
+    },
+    {
+      "section_index": 2,
+      "start": 15.0,
+      "end": 30.0,
+      "energy": 0.42,
+      "label": "Verse / Intro"
+    },
+    {
+      "section_index": 3,
+      "start": 30.0,
+      "end": 45.0,
+      "energy": 0.48,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 4,
+      "start": 45.0,
+      "end": 60.0,
+      "energy": 0.59,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 5,
+      "start": 60.0,
+      "end": 75.0,
+      "energy": 0.53,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 6,
+      "start": 75.0,
+      "end": 90.0,
+      "energy": 0.52,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 7,
+      "start": 90.0,
+      "end": 105.0,
+      "energy": 0.75,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 8,
+      "start": 105.0,
+      "end": 120.0,
+      "energy": 0.66,
+      "label": "Chorus / Build-up"
+    },
+    {
+      "section_index": 9,
+      "start": 120.0,
+      "end": 126.68,
+      "energy": 0.68,
+      "label": "Chorus / Build-up"
+    }
+  ],
+  "lyrics_timeline": [
+    {
+      "start": 0.0,
+      "end": 1.52,
+      "text": "And it made night in the city, the midnight",
+      "words": [
+        {
+          "word": "And",
+          "start": 0.0,
+          "end": 0.12
+        },
+        {
+          "word": "it",
+          "start": 0.12,
+          "end": 0.2
+        },
+        {
+          "word": "made",
+          "start": 0.2,
+          "end": 0.32
+        },
+        {
+          "word": "night",
+          "start": 0.32,
+          "end": 0.54
+        },
+        {
+          "word": "in",
+          "start": 0.54,
+          "end": 0.7
+        },
+        {
+          "word": "the",
+          "start": 0.7,
+          "end": 0.8
+        },
+        {
+          "word": "city,",
+          "start": 0.8,
+          "end": 0.96
+        },
+        {
+          "word": "the",
+          "start": 1.06,
+          "end": 1.18
+        },
+        {
+          "word": "midnight",
+          "start": 1.18,
+          "end": 1.52
+        }
+      ]
+    },
+    {
+      "start": 3.52,
+      "end": 4.86,
+      "text": "Made none in the city",
+      "words": [
+        {
+          "word": "Made",
+          "start": 3.52,
+          "end": 3.88
+        },
+        {
+          "word": "none",
+          "start": 3.88,
+          "end": 4.12
+        },
+        {
+          "word": "in",
+          "start": 4.12,
+          "end": 4.42
+        },
+        {
+          "word": "the",
+          "start": 4.42,
+          "end": 4.68
+        },
+        {
+          "word": "city",
+          "start": 4.68,
+          "end": 4.86
+        }
+      ]
+    },
+    {
+      "start": 5.24,
+      "end": 6.88,
+      "text": "So to tie baby, we don't sleep",
+      "words": [
+        {
+          "word": "So",
+          "start": 5.24,
+          "end": 5.6
+        },
+        {
+          "word": "to",
+          "start": 5.6,
+          "end": 5.78
+        },
+        {
+          "word": "tie",
+          "start": 5.78,
+          "end": 6.04
+        },
+        {
+          "word": "baby,",
+          "start": 6.04,
+          "end": 6.22
+        },
+        {
+          "word": "we",
+          "start": 6.4,
+          "end": 6.44
+        },
+        {
+          "word": "don't",
+          "start": 6.44,
+          "end": 6.56
+        },
+        {
+          "word": "sleep",
+          "start": 6.56,
+          "end": 6.88
+        }
+      ]
+    },
+    {
+      "start": 6.88,
+      "end": 8.4,
+      "text": "Turn it up, let's get it",
+      "words": [
+        {
+          "word": "Turn",
+          "start": 6.88,
+          "end": 7.26
+        },
+        {
+          "word": "it",
+          "start": 7.26,
+          "end": 7.36
+        },
+        {
+          "word": "up,",
+          "start": 7.36,
+          "end": 7.54
+        },
+        {
+          "word": "let's",
+          "start": 7.6,
+          "end": 7.98
+        },
+        {
+          "word": "get",
+          "start": 7.98,
+          "end": 8.12
+        },
+        {
+          "word": "it",
+          "start": 8.12,
+          "end": 8.4
+        }
+      ]
+    },
+    {
+      "start": 11.32,
+      "end": 11.68,
+      "text": "Yeah",
+      "words": [
+        {
+          "word": "Yeah",
+          "start": 11.32,
+          "end": 11.68
+        }
+      ]
+    },
+    {
+      "start": 11.68,
+      "end": 14.62,
+      "text": "I made night in the city",
+      "words": [
+        {
+          "word": "I",
+          "start": 11.68,
+          "end": 12.1
+        },
+        {
+          "word": "made",
+          "start": 12.1,
+          "end": 13.64
+        },
+        {
+          "word": "night",
+          "start": 13.64,
+          "end": 13.88
+        },
+        {
+          "word": "in",
+          "start": 13.88,
+          "end": 14.16
+        },
+        {
+          "word": "the",
+          "start": 14.16,
+          "end": 14.28
+        },
+        {
+          "word": "city",
+          "start": 14.28,
+          "end": 14.62
+        }
+      ]
+    },
+    {
+      "start": 15.22,
+      "end": 16.6,
+      "text": "I'm so excited, I'm so excited, I'm so excited",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 15.22,
+          "end": 15.58
+        },
+        {
+          "word": "so",
+          "start": 15.58,
+          "end": 15.64
+        },
+        {
+          "word": "excited,",
+          "start": 15.64,
+          "end": 15.82
+        },
+        {
+          "word": "I'm",
+          "start": 15.9,
+          "end": 16.04
+        },
+        {
+          "word": "so",
+          "start": 16.04,
+          "end": 16.1
+        },
+        {
+          "word": "excited,",
+          "start": 16.1,
+          "end": 16.1
+        },
+        {
+          "word": "I'm",
+          "start": 16.1,
+          "end": 16.28
+        },
+        {
+          "word": "so",
+          "start": 16.28,
+          "end": 16.34
+        },
+        {
+          "word": "excited",
+          "start": 16.34,
+          "end": 16.6
+        }
+      ]
+    },
+    {
+      "start": 16.6,
+      "end": 18.28,
+      "text": "I'm gonna burn my head, I'm gonna shoot it, I'm on top",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 16.6,
+          "end": 16.68
+        },
+        {
+          "word": "gonna",
+          "start": 16.68,
+          "end": 16.68
+        },
+        {
+          "word": "burn",
+          "start": 16.68,
+          "end": 16.86
+        },
+        {
+          "word": "my",
+          "start": 16.86,
+          "end": 16.96
+        },
+        {
+          "word": "head,",
+          "start": 16.96,
+          "end": 16.96
+        },
+        {
+          "word": "I'm",
+          "start": 17.14,
+          "end": 17.3
+        },
+        {
+          "word": "gonna",
+          "start": 17.3,
+          "end": 17.3
+        },
+        {
+          "word": "shoot",
+          "start": 17.3,
+          "end": 17.48
+        },
+        {
+          "word": "it,",
+          "start": 17.48,
+          "end": 17.64
+        },
+        {
+          "word": "I'm",
+          "start": 17.64,
+          "end": 17.98
+        },
+        {
+          "word": "on",
+          "start": 17.98,
+          "end": 18.08
+        },
+        {
+          "word": "top",
+          "start": 18.08,
+          "end": 18.28
+        }
+      ]
+    },
+    {
+      "start": 18.28,
+      "end": 19.96,
+      "text": "I'm gonna, I'm gonna make them show",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 18.28,
+          "end": 18.7
+        },
+        {
+          "word": "gonna,",
+          "start": 18.7,
+          "end": 18.8
+        },
+        {
+          "word": "I'm",
+          "start": 18.8,
+          "end": 19.44
+        },
+        {
+          "word": "gonna",
+          "start": 19.44,
+          "end": 19.58
+        },
+        {
+          "word": "make",
+          "start": 19.58,
+          "end": 19.58
+        },
+        {
+          "word": "them",
+          "start": 19.58,
+          "end": 19.8
+        },
+        {
+          "word": "show",
+          "start": 19.8,
+          "end": 19.96
+        }
+      ]
+    },
+    {
+      "start": 19.96,
+      "end": 21.62,
+      "text": "Catch it, I'm gonna be, we don't play no joke",
+      "words": [
+        {
+          "word": "Catch",
+          "start": 19.96,
+          "end": 20.18
+        },
+        {
+          "word": "it,",
+          "start": 20.18,
+          "end": 20.24
+        },
+        {
+          "word": "I'm",
+          "start": 20.3,
+          "end": 20.44
+        },
+        {
+          "word": "gonna",
+          "start": 20.44,
+          "end": 20.44
+        },
+        {
+          "word": "be,",
+          "start": 20.44,
+          "end": 20.56
+        },
+        {
+          "word": "we",
+          "start": 20.56,
+          "end": 20.78
+        },
+        {
+          "word": "don't",
+          "start": 20.78,
+          "end": 21.04
+        },
+        {
+          "word": "play",
+          "start": 21.04,
+          "end": 21.24
+        },
+        {
+          "word": "no",
+          "start": 21.24,
+          "end": 21.46
+        },
+        {
+          "word": "joke",
+          "start": 21.46,
+          "end": 21.62
+        }
+      ]
+    },
+    {
+      "start": 21.62,
+      "end": 22.98,
+      "text": "To tie baby, you lose all the short edge",
+      "words": [
+        {
+          "word": "To",
+          "start": 21.62,
+          "end": 21.76
+        },
+        {
+          "word": "tie",
+          "start": 21.76,
+          "end": 21.92
+        },
+        {
+          "word": "baby,",
+          "start": 21.92,
+          "end": 22.08
+        },
+        {
+          "word": "you",
+          "start": 22.2,
+          "end": 22.28
+        },
+        {
+          "word": "lose",
+          "start": 22.28,
+          "end": 22.4
+        },
+        {
+          "word": "all",
+          "start": 22.4,
+          "end": 22.48
+        },
+        {
+          "word": "the",
+          "start": 22.48,
+          "end": 22.56
+        },
+        {
+          "word": "short",
+          "start": 22.56,
+          "end": 22.7
+        },
+        {
+          "word": "edge",
+          "start": 22.7,
+          "end": 22.98
+        }
+      ]
+    },
+    {
+      "start": 22.98,
+      "end": 25.3,
+      "text": "To show what your microphone's up or way too old",
+      "words": [
+        {
+          "word": "To",
+          "start": 22.98,
+          "end": 23.36
+        },
+        {
+          "word": "show",
+          "start": 23.36,
+          "end": 23.54
+        },
+        {
+          "word": "what",
+          "start": 23.54,
+          "end": 23.78
+        },
+        {
+          "word": "your",
+          "start": 23.78,
+          "end": 23.84
+        },
+        {
+          "word": "microphone's",
+          "start": 23.84,
+          "end": 24.32
+        },
+        {
+          "word": "up",
+          "start": 24.32,
+          "end": 24.36
+        },
+        {
+          "word": "or",
+          "start": 24.36,
+          "end": 24.48
+        },
+        {
+          "word": "way",
+          "start": 24.48,
+          "end": 24.66
+        },
+        {
+          "word": "too",
+          "start": 24.66,
+          "end": 25.04
+        },
+        {
+          "word": "old",
+          "start": 25.04,
+          "end": 25.3
+        }
+      ]
+    },
+    {
+      "start": 25.3,
+      "end": 26.98,
+      "text": "I only watch my flow",
+      "words": [
+        {
+          "word": "I",
+          "start": 25.3,
+          "end": 25.52
+        },
+        {
+          "word": "only",
+          "start": 25.52,
+          "end": 25.76
+        },
+        {
+          "word": "watch",
+          "start": 25.76,
+          "end": 26.16
+        },
+        {
+          "word": "my",
+          "start": 26.16,
+          "end": 26.48
+        },
+        {
+          "word": "flow",
+          "start": 26.48,
+          "end": 26.98
+        }
+      ]
+    },
+    {
+      "start": 26.98,
+      "end": 28.66,
+      "text": "We need for the fire, here we go",
+      "words": [
+        {
+          "word": "We",
+          "start": 26.98,
+          "end": 27.12
+        },
+        {
+          "word": "need",
+          "start": 27.12,
+          "end": 27.26
+        },
+        {
+          "word": "for",
+          "start": 27.26,
+          "end": 27.32
+        },
+        {
+          "word": "the",
+          "start": 27.32,
+          "end": 27.4
+        },
+        {
+          "word": "fire,",
+          "start": 27.4,
+          "end": 27.74
+        },
+        {
+          "word": "here",
+          "start": 27.94,
+          "end": 28.04
+        },
+        {
+          "word": "we",
+          "start": 28.04,
+          "end": 28.22
+        },
+        {
+          "word": "go",
+          "start": 28.22,
+          "end": 28.66
+        }
+      ]
+    },
+    {
+      "start": 28.66,
+      "end": 31.2,
+      "text": "We talk about each other, those short dead on my low side",
+      "words": [
+        {
+          "word": "We",
+          "start": 28.66,
+          "end": 28.96
+        },
+        {
+          "word": "talk",
+          "start": 28.96,
+          "end": 29.12
+        },
+        {
+          "word": "about",
+          "start": 29.12,
+          "end": 29.36
+        },
+        {
+          "word": "each",
+          "start": 29.36,
+          "end": 29.52
+        },
+        {
+          "word": "other,",
+          "start": 29.52,
+          "end": 29.88
+        },
+        {
+          "word": "those",
+          "start": 30.26,
+          "end": 30.4
+        },
+        {
+          "word": "short",
+          "start": 30.4,
+          "end": 30.56
+        },
+        {
+          "word": "dead",
+          "start": 30.56,
+          "end": 30.68
+        },
+        {
+          "word": "on",
+          "start": 30.68,
+          "end": 30.84
+        },
+        {
+          "word": "my",
+          "start": 30.84,
+          "end": 30.94
+        },
+        {
+          "word": "low",
+          "start": 30.94,
+          "end": 31.06
+        },
+        {
+          "word": "side",
+          "start": 31.06,
+          "end": 31.2
+        }
+      ]
+    },
+    {
+      "start": 31.2,
+      "end": 32.28,
+      "text": "G on our way, go",
+      "words": [
+        {
+          "word": "G",
+          "start": 31.2,
+          "end": 31.38
+        },
+        {
+          "word": "on",
+          "start": 31.38,
+          "end": 31.52
+        },
+        {
+          "word": "our",
+          "start": 31.52,
+          "end": 31.64
+        },
+        {
+          "word": "way,",
+          "start": 31.64,
+          "end": 31.84
+        },
+        {
+          "word": "go",
+          "start": 31.98,
+          "end": 32.28
+        }
+      ]
+    },
+    {
+      "start": 32.28,
+      "end": 33.96,
+      "text": "That's what sound else, if I hate it as well",
+      "words": [
+        {
+          "word": "That's",
+          "start": 32.28,
+          "end": 32.72
+        },
+        {
+          "word": "what",
+          "start": 32.72,
+          "end": 32.76
+        },
+        {
+          "word": "sound",
+          "start": 32.76,
+          "end": 32.94
+        },
+        {
+          "word": "else,",
+          "start": 32.94,
+          "end": 33.14
+        },
+        {
+          "word": "if",
+          "start": 33.14,
+          "end": 33.24
+        },
+        {
+          "word": "I",
+          "start": 33.24,
+          "end": 33.34
+        },
+        {
+          "word": "hate",
+          "start": 33.34,
+          "end": 33.52
+        },
+        {
+          "word": "it",
+          "start": 33.52,
+          "end": 33.66
+        },
+        {
+          "word": "as",
+          "start": 33.66,
+          "end": 33.84
+        },
+        {
+          "word": "well",
+          "start": 33.84,
+          "end": 33.96
+        }
+      ]
+    },
+    {
+      "start": 33.96,
+      "end": 35.2,
+      "text": "Now when it's that heat, let it blow",
+      "words": [
+        {
+          "word": "Now",
+          "start": 33.96,
+          "end": 34.12
+        },
+        {
+          "word": "when",
+          "start": 34.12,
+          "end": 34.32
+        },
+        {
+          "word": "it's",
+          "start": 34.32,
+          "end": 34.52
+        },
+        {
+          "word": "that",
+          "start": 34.52,
+          "end": 34.6
+        },
+        {
+          "word": "heat,",
+          "start": 34.6,
+          "end": 34.72
+        },
+        {
+          "word": "let",
+          "start": 34.74,
+          "end": 34.88
+        },
+        {
+          "word": "it",
+          "start": 34.88,
+          "end": 34.98
+        },
+        {
+          "word": "blow",
+          "start": 34.98,
+          "end": 35.2
+        }
+      ]
+    },
+    {
+      "start": 35.2,
+      "end": 37.44,
+      "text": "We run this city, we run this throne",
+      "words": [
+        {
+          "word": "We",
+          "start": 35.2,
+          "end": 35.4
+        },
+        {
+          "word": "run",
+          "start": 35.4,
+          "end": 35.62
+        },
+        {
+          "word": "this",
+          "start": 35.62,
+          "end": 35.9
+        },
+        {
+          "word": "city,",
+          "start": 35.9,
+          "end": 36.06
+        },
+        {
+          "word": "we",
+          "start": 36.3,
+          "end": 36.64
+        },
+        {
+          "word": "run",
+          "start": 36.64,
+          "end": 36.92
+        },
+        {
+          "word": "this",
+          "start": 36.92,
+          "end": 37.12
+        },
+        {
+          "word": "throne",
+          "start": 37.12,
+          "end": 37.44
+        }
+      ]
+    },
+    {
+      "start": 37.84,
+      "end": 41.56,
+      "text": "Ties we soiled, it hit on the zone",
+      "words": [
+        {
+          "word": "Ties",
+          "start": 37.84,
+          "end": 38.22
+        },
+        {
+          "word": "we",
+          "start": 38.22,
+          "end": 38.34
+        },
+        {
+          "word": "soiled,",
+          "start": 38.34,
+          "end": 38.96
+        },
+        {
+          "word": "it",
+          "start": 38.98,
+          "end": 39.48
+        },
+        {
+          "word": "hit",
+          "start": 39.48,
+          "end": 39.96
+        },
+        {
+          "word": "on",
+          "start": 39.96,
+          "end": 40.22
+        },
+        {
+          "word": "the",
+          "start": 40.22,
+          "end": 40.48
+        },
+        {
+          "word": "zone",
+          "start": 40.48,
+          "end": 41.56
+        }
+      ]
+    },
+    {
+      "start": 41.56,
+      "end": 44.48,
+      "text": "We run this city, I did the crown home",
+      "words": [
+        {
+          "word": "We",
+          "start": 41.56,
+          "end": 42.16
+        },
+        {
+          "word": "run",
+          "start": 42.16,
+          "end": 42.32
+        },
+        {
+          "word": "this",
+          "start": 42.32,
+          "end": 42.62
+        },
+        {
+          "word": "city,",
+          "start": 42.62,
+          "end": 42.92
+        },
+        {
+          "word": "I",
+          "start": 43.1,
+          "end": 43.2
+        },
+        {
+          "word": "did",
+          "start": 43.2,
+          "end": 43.36
+        },
+        {
+          "word": "the",
+          "start": 43.36,
+          "end": 43.56
+        },
+        {
+          "word": "crown",
+          "start": 43.56,
+          "end": 43.74
+        },
+        {
+          "word": "home",
+          "start": 43.74,
+          "end": 44.48
+        }
+      ]
+    },
+    {
+      "start": 44.48,
+      "end": 47.54,
+      "text": "Me and the night go, it's breaking every blow",
+      "words": [
+        {
+          "word": "Me",
+          "start": 44.48,
+          "end": 44.92
+        },
+        {
+          "word": "and",
+          "start": 44.92,
+          "end": 45.08
+        },
+        {
+          "word": "the",
+          "start": 45.08,
+          "end": 45.3
+        },
+        {
+          "word": "night",
+          "start": 45.3,
+          "end": 45.38
+        },
+        {
+          "word": "go,",
+          "start": 45.38,
+          "end": 45.56
+        },
+        {
+          "word": "it's",
+          "start": 45.56,
+          "end": 45.88
+        },
+        {
+          "word": "breaking",
+          "start": 45.88,
+          "end": 46.32
+        },
+        {
+          "word": "every",
+          "start": 46.32,
+          "end": 47.0
+        },
+        {
+          "word": "blow",
+          "start": 47.0,
+          "end": 47.54
+        }
+      ]
+    },
+    {
+      "start": 51.9,
+      "end": 57.36,
+      "text": "Yeah, beat the buck, ain't those Mr. Pito",
+      "words": [
+        {
+          "word": "Yeah,",
+          "start": 51.9,
+          "end": 52.28
+        },
+        {
+          "word": "beat",
+          "start": 55.74,
+          "end": 55.86
+        },
+        {
+          "word": "the",
+          "start": 55.86,
+          "end": 55.96
+        },
+        {
+          "word": "buck,",
+          "start": 55.96,
+          "end": 56.12
+        },
+        {
+          "word": "ain't",
+          "start": 56.4,
+          "end": 56.62
+        },
+        {
+          "word": "those",
+          "start": 56.62,
+          "end": 56.72
+        },
+        {
+          "word": "Mr.",
+          "start": 56.72,
+          "end": 56.94
+        },
+        {
+          "word": "Pito",
+          "start": 57.1,
+          "end": 57.36
+        }
+      ]
+    },
+    {
+      "start": 79.82,
+      "end": 81.02,
+      "text": "Yeah, beat the buck, ain't you",
+      "words": [
+        {
+          "word": "Yeah,",
+          "start": 79.82,
+          "end": 81.02
+        },
+        {
+          "word": "beat",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "the",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "buck,",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "ain't",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "you",
+          "start": 81.02,
+          "end": 81.02
+        }
+      ]
+    },
+    {
+      "start": 81.02,
+      "end": 81.02,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 81.02,
+      "end": 83.6,
+      "text": "We taking over, no without a rubber",
+      "words": [
+        {
+          "word": "We",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "taking",
+          "start": 81.02,
+          "end": 81.02
+        },
+        {
+          "word": "over,",
+          "start": 81.02,
+          "end": 82.16
+        },
+        {
+          "word": "no",
+          "start": 83.16,
+          "end": 83.26
+        },
+        {
+          "word": "without",
+          "start": 83.26,
+          "end": 83.4
+        },
+        {
+          "word": "a",
+          "start": 83.4,
+          "end": 83.6
+        },
+        {
+          "word": "rubber",
+          "start": 83.6,
+          "end": 83.6
+        }
+      ]
+    },
+    {
+      "start": 83.6,
+      "end": 86.42,
+      "text": "We run this day, we run this pro",
+      "words": [
+        {
+          "word": "We",
+          "start": 83.6,
+          "end": 84.4
+        },
+        {
+          "word": "run",
+          "start": 84.4,
+          "end": 84.64
+        },
+        {
+          "word": "this",
+          "start": 84.64,
+          "end": 84.9
+        },
+        {
+          "word": "day,",
+          "start": 84.9,
+          "end": 85.14
+        },
+        {
+          "word": "we",
+          "start": 85.28,
+          "end": 85.62
+        },
+        {
+          "word": "run",
+          "start": 85.62,
+          "end": 85.9
+        },
+        {
+          "word": "this",
+          "start": 85.9,
+          "end": 86.1
+        },
+        {
+          "word": "pro",
+          "start": 86.1,
+          "end": 86.42
+        }
+      ]
+    },
+    {
+      "start": 86.42,
+      "end": 90.04,
+      "text": "Size and title just making us all",
+      "words": [
+        {
+          "word": "Size",
+          "start": 86.42,
+          "end": 87.22
+        },
+        {
+          "word": "and",
+          "start": 87.22,
+          "end": 87.4
+        },
+        {
+          "word": "title",
+          "start": 87.4,
+          "end": 87.7
+        },
+        {
+          "word": "just",
+          "start": 87.7,
+          "end": 88.12
+        },
+        {
+          "word": "making",
+          "start": 88.12,
+          "end": 88.78
+        },
+        {
+          "word": "us",
+          "start": 88.78,
+          "end": 89.4
+        },
+        {
+          "word": "all",
+          "start": 89.4,
+          "end": 90.04
+        }
+      ]
+    },
+    {
+      "start": 90.6,
+      "end": 93.2,
+      "text": "We run this day, we run all",
+      "words": [
+        {
+          "word": "We",
+          "start": 90.6,
+          "end": 91.14
+        },
+        {
+          "word": "run",
+          "start": 91.14,
+          "end": 91.4
+        },
+        {
+          "word": "this",
+          "start": 91.4,
+          "end": 91.64
+        },
+        {
+          "word": "day,",
+          "start": 91.64,
+          "end": 91.88
+        },
+        {
+          "word": "we",
+          "start": 92.1,
+          "end": 92.28
+        },
+        {
+          "word": "run",
+          "start": 92.28,
+          "end": 92.66
+        },
+        {
+          "word": "all",
+          "start": 92.66,
+          "end": 93.2
+        }
+      ]
+    },
+    {
+      "start": 93.2,
+      "end": 97.6,
+      "text": "Me and I go each breakin' every move",
+      "words": [
+        {
+          "word": "Me",
+          "start": 93.2,
+          "end": 93.9
+        },
+        {
+          "word": "and",
+          "start": 93.9,
+          "end": 94.06
+        },
+        {
+          "word": "I",
+          "start": 94.06,
+          "end": 94.36
+        },
+        {
+          "word": "go",
+          "start": 94.36,
+          "end": 94.56
+        },
+        {
+          "word": "each",
+          "start": 94.56,
+          "end": 94.84
+        },
+        {
+          "word": "breakin'",
+          "start": 94.84,
+          "end": 95.44
+        },
+        {
+          "word": "every",
+          "start": 95.62,
+          "end": 96.08
+        },
+        {
+          "word": "move",
+          "start": 96.08,
+          "end": 97.6
+        }
+      ]
+    },
+    {
+      "start": 118.48,
+      "end": 119.88,
+      "text": "I'm a pro",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 118.48,
+          "end": 119.88
+        },
+        {
+          "word": "a",
+          "start": 119.88,
+          "end": 119.88
+        },
+        {
+          "word": "pro",
+          "start": 119.88,
+          "end": 119.88
+        }
+      ]
+    },
+    {
+      "start": 119.88,
+      "end": 119.88,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 119.88,
+      "end": 119.88,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 119.88,
+      "end": 119.88,
+      "text": "",
+      "words": []
+    },
+    {
+      "start": 119.88,
+      "end": 120.74,
+      "text": "I'm a pro",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 119.88,
+          "end": 120.74
+        },
+        {
+          "word": "a",
+          "start": 120.74,
+          "end": 120.74
+        },
+        {
+          "word": "pro",
+          "start": 120.74,
+          "end": 120.74
+        }
+      ]
+    }
+  ]
+}

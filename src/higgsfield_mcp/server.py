@@ -463,9 +463,130 @@ async def list_characters() -> str:
         }, indent=2)
 
 
+@mcp.tool
+async def compile_cinematic_prompt(
+    concept: str,
+    lens_type: str = "35mm anamorphic prime lens, f/1.8",
+    movement: str = "slow push-in tracking shot, smooth DoP motion",
+    lighting: str = "cinematic Rembrandt lighting, volumetric dusk glow, high contrast"
+) -> str:
+    """
+    Compile a raw visual concept into a high-end cinematic prompt tailored for Higgsfield Soul/DoP.
+
+    Args:
+        concept: Core subject or visual idea (e.g., 'a musician playing electric guitar in a rainy alley')
+        lens_type: Lens characteristics (default: 35mm anamorphic prime lens, f/1.8)
+        movement: Camera movement descriptor (default: slow push-in tracking shot, smooth DoP motion)
+        lighting: Atmosphere and lighting setup (default: cinematic Rembrandt lighting)
+
+    Returns:
+        JSON string containing compiled prompt and metadata specs
+    """
+    compiled_prompt = (
+        f"Cinematic video frame of {concept}. "
+        f"Shot on {lens_type}. {lighting}. {movement}. "
+        f"Hyper-detailed 8K resolution, photorealistic film grain, ARRI Alexa Mini LF color science, depth of field."
+    )
+    return json.dumps({
+        "success": True,
+        "raw_concept": concept,
+        "compiled_prompt": compiled_prompt,
+        "specs": {
+            "lens": lens_type,
+            "movement": movement,
+            "lighting": lighting
+        }
+    }, indent=2, ensure_ascii=False)
+
+
+@mcp.tool
+async def download_generation_result(
+    job_set_id: str,
+    output_folder: str = "./output/renders"
+) -> str:
+    """
+    Poll generation job status and automatically download completed MP4/PNG renders to local folder.
+
+    Args:
+        job_set_id: The job set ID returned from generate_image or generate_video
+        output_folder: Path to local target directory (default: ./output/renders)
+
+    Returns:
+        JSON string with list of saved file paths and media URLs
+    """
+    try:
+        downloaded = await client.poll_and_download(job_set_id, output_folder)
+        return json.dumps({
+            "success": True,
+            "job_set_id": job_set_id,
+            "saved_count": len(downloaded),
+            "files": downloaded
+        }, indent=2, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({
+            "success": False,
+            "job_set_id": job_set_id,
+            "error": str(e)
+        }, indent=2, ensure_ascii=False)
+
+
+@mcp.tool
+async def batch_render_storyboard(
+    storyboard_json_path: str,
+    output_dir: str = "./output/storyboard_renders"
+) -> str:
+    """
+    Batch submit a multi-shot storyboard JSON file to Higgsfield for automated video rendering.
+
+    Args:
+        storyboard_json_path: Path to storyboard JSON file containing list of shots
+        output_dir: Folder to store batch status and output logs
+
+    Returns:
+        JSON summary of queued jobs
+    """
+    try:
+        sb_path = Path(storyboard_json_path)
+        if not sb_path.exists():
+            return json.dumps({"success": False, "error": f"Storyboard file not found: {storyboard_json_path}"})
+
+        with open(sb_path, "r", encoding="utf-8") as f:
+            shots = json.load(f)
+
+        if not isinstance(shots, list):
+            shots = shots.get("shots", [])
+
+        submitted_jobs = []
+        for shot in shots:
+            shot_id = shot.get("shot_id", "shot")
+            prompt = shot.get("prompt", "")
+            image_url = shot.get("image_url", "")
+            motion_id = shot.get("motion_id", "camera_push_in")
+
+            if image_url:
+                res = await client.generate_video(image_url=image_url, motion_id=motion_id, prompt=prompt)
+            else:
+                res = await client.generate_image(prompt=prompt)
+
+            submitted_jobs.append({
+                "shot_id": shot_id,
+                "job_set_id": res.get("job_set_id") or res.get("id"),
+                "prompt": prompt
+            })
+
+        return json.dumps({
+            "success": True,
+            "total_shots": len(submitted_jobs),
+            "jobs": submitted_jobs
+        }, indent=2, ensure_ascii=False)
+    except Exception as e:
+        return json.dumps({"success": False, "error": str(e)}, indent=2, ensure_ascii=False)
+
+
 # ============================================================================
 # MCP RESOURCES - Browsable data
 # ============================================================================
+
 
 @mcp.resource("higgsfield://styles")
 async def list_soul_styles() -> str:

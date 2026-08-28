@@ -1,0 +1,36 @@
+{
+  "characters": [
+    {
+      "id": "character_main",
+      "name": "Main Singer / Protagonist",
+      "prompt": "Character concept sheet, 4-view turnaround (front, side, 3/4, back), cyberpunk_kai_oxyn aesthetic, futuristic outfit, highly detailed, 8k",
+      "output_filename": "character_main_sheet.png"
+    }
+  ],
+  "locations": [
+    {
+      "id": "location_sec_1",
+      "name": "Environment for Section 1",
+      "prompt": "Cinematic location keyframe, cyberpunk_kai_oxyn environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_1.png"
+    },
+    {
+      "id": "location_sec_2",
+      "name": "Environment for Section 2",
+      "prompt": "Cinematic location keyframe, cyberpunk_kai_oxyn environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_2.png"
+    },
+    {
+      "id": "location_sec_3",
+      "name": "Environment for Section 3",
+      "prompt": "Cinematic location keyframe, cyberpunk_kai_oxyn environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_3.png"
+    },
+    {
+      "id": "location_sec_4",
+      "name": "Environment for Section 4",
+      "prompt": "Cinematic location keyframe, cyberpunk_kai_oxyn environment, wide angle atmospheric lighting, volumetric fog, 8k",
+      "output_filename": "location_sec_4.png"
+    }
+  ]
+}

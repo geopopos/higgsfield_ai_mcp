@@ -1,0 +1,889 @@
+{
+  "style_preset": "Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic",
+  "total_shots": 55,
+  "bpm": 68.0,
+  "fps": 24,
+  "duration_sec": 270.08,
+  "shots": [
+    {
+      "shot_id": "shot_001",
+      "section": 1,
+      "start_time": 0.0,
+      "end_time": 6.0,
+      "start_frame": 0,
+      "end_frame": 144,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '(Guzheng plucking solo, eerie wind sound)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_002",
+      "section": 1,
+      "start_time": 6.0,
+      "end_time": 12.0,
+      "start_frame": 144,
+      "end_frame": 288,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '(Heavy 808 bass drop enters slowly)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_003",
+      "section": 1,
+      "start_time": 12.0,
+      "end_time": 15.0,
+      "start_frame": 288,
+      "end_frame": 360,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'Yeah. KAI ONYX. Look up. We taking over the night.'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_1.png"
+    },
+    {
+      "shot_id": "shot_004",
+      "section": 2,
+      "start_time": 15.0,
+      "end_time": 21.0,
+      "start_frame": 360,
+      "end_frame": 504,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_005",
+      "section": 2,
+      "start_time": 21.0,
+      "end_time": 27.0,
+      "start_frame": 504,
+      "end_frame": 648,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '穿著全黑的 Hoodie 走在長安街'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_006",
+      "section": 2,
+      "start_time": 27.0,
+      "end_time": 30.0,
+      "start_frame": 648,
+      "end_frame": 720,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '月光灑在地上 reflected on my J's'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_2.png"
+    },
+    {
+      "shot_id": "shot_007",
+      "section": 3,
+      "start_time": 30.0,
+      "end_time": 36.0,
+      "start_frame": 720,
+      "end_frame": 864,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '不需要通行證 I got the Master Key'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_008",
+      "section": 3,
+      "start_time": 36.0,
+      "end_time": 42.0,
+      "start_frame": 864,
+      "end_frame": 1008,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '系統偵測不到我像個 Ghost ID'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_009",
+      "section": 3,
+      "start_time": 42.0,
+      "end_time": 45.0,
+      "start_frame": 1008,
+      "end_frame": 1080,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '他們還在爭奪那些地面的權力'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_3.png"
+    },
+    {
+      "shot_id": "shot_010",
+      "section": 4,
+      "start_time": 45.0,
+      "end_time": 51.0,
+      "start_frame": 1080,
+      "end_frame": 1224,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '我已經 Level Up 到了無人能及的天際'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    },
+    {
+      "shot_id": "shot_011",
+      "section": 4,
+      "start_time": 51.0,
+      "end_time": 57.0,
+      "start_frame": 1224,
+      "end_frame": 1368,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '古老的城牆 lock 住誰的秘密'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    },
+    {
+      "shot_id": "shot_012",
+      "section": 4,
+      "start_time": 57.0,
+      "end_time": 60.0,
+      "start_frame": 1368,
+      "end_frame": 1440,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '但在我的視角只是一場遊戲'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_4.png"
+    },
+    {
+      "shot_id": "shot_013",
+      "section": 5,
+      "start_time": 60.0,
+      "end_time": 66.0,
+      "start_frame": 1440,
+      "end_frame": 1584,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '警報聲在響 但我聽不到 只有心跳聲 在跟我訊號'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_5.png"
+    },
+    {
+      "shot_id": "shot_014",
+      "section": 5,
+      "start_time": 66.0,
+      "end_time": 72.0,
+      "start_frame": 1584,
+      "end_frame": 1728,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_5.png"
+    },
+    {
+      "shot_id": "shot_015",
+      "section": 5,
+      "start_time": 72.0,
+      "end_time": 75.0,
+      "start_frame": 1728,
+      "end_frame": 1800,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'They trying to catch me riding dirty 但我的flow像水一樣 sturdy'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_5.png"
+    },
+    {
+      "shot_id": "shot_016",
+      "section": 6,
+      "start_time": 75.0,
+      "end_time": 81.0,
+      "start_frame": 1800,
+      "end_frame": 1944,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_6.png"
+    },
+    {
+      "shot_id": "shot_017",
+      "section": 6,
+      "start_time": 81.0,
+      "end_time": 87.0,
+      "start_frame": 1944,
+      "end_frame": 2088,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'Forbidden Night, 紫禁夜行 只有強者才配擁有這個夜景'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_6.png"
+    },
+    {
+      "shot_id": "shot_018",
+      "section": 6,
+      "start_time": 87.0,
+      "end_time": 90.0,
+      "start_frame": 2088,
+      "end_frame": 2160,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_6.png"
+    },
+    {
+      "shot_id": "shot_019",
+      "section": 7,
+      "start_time": 90.0,
+      "end_time": 96.0,
+      "start_frame": 2160,
+      "end_frame": 2304,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'History 重寫, I'm the new King 打破了規則, hear the alarm ring'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_7.png"
+    },
+    {
+      "shot_id": "shot_020",
+      "section": 7,
+      "start_time": 96.0,
+      "end_time": 102.0,
+      "start_frame": 2304,
+      "end_frame": 2448,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_7.png"
+    },
+    {
+      "shot_id": "shot_021",
+      "section": 7,
+      "start_time": 102.0,
+      "end_time": 105.0,
+      "start_frame": 2448,
+      "end_frame": 2520,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '紫禁夜行, no mercy, no grace 穿梭在宮牆外, leave no trace'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_7.png"
+    },
+    {
+      "shot_id": "shot_022",
+      "section": 8,
+      "start_time": 105.0,
+      "end_time": 111.0,
+      "start_frame": 2520,
+      "end_frame": 2664,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_8.png"
+    },
+    {
+      "shot_id": "shot_023",
+      "section": 8,
+      "start_time": 111.0,
+      "end_time": 117.0,
+      "start_frame": 2664,
+      "end_frame": 2808,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '從古代到未來, I run this place KAI ONYX legacy, watch me ace.'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_8.png"
+    },
+    {
+      "shot_id": "shot_024",
+      "section": 8,
+      "start_time": 117.0,
+      "end_time": 120.0,
+      "start_frame": 2808,
+      "end_frame": 2880,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_8.png"
+    },
+    {
+      "shot_id": "shot_025",
+      "section": 9,
+      "start_time": 120.0,
+      "end_time": 126.0,
+      "start_frame": 2880,
+      "end_frame": 3024,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '(Sound of sword unsheathing: Schwing) (Heavy 808 slide solo with glass shatter samples)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_9.png"
+    },
+    {
+      "shot_id": "shot_026",
+      "section": 9,
+      "start_time": 126.0,
+      "end_time": 132.0,
+      "start_frame": 3024,
+      "end_frame": 3168,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_9.png"
+    },
+    {
+      "shot_id": "shot_027",
+      "section": 9,
+      "start_time": 132.0,
+      "end_time": 135.0,
+      "start_frame": 3168,
+      "end_frame": 3240,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_9.png"
+    },
+    {
+      "shot_id": "shot_028",
+      "section": 10,
+      "start_time": 135.0,
+      "end_time": 141.0,
+      "start_frame": 3240,
+      "end_frame": 3384,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '這是 Drill but make it graceful 像書法運筆一樣 faithful'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_10.png"
+    },
+    {
+      "shot_id": "shot_029",
+      "section": 10,
+      "start_time": 141.0,
+      "end_time": 147.0,
+      "start_frame": 3384,
+      "end_frame": 3528,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_10.png"
+    },
+    {
+      "shot_id": "shot_030",
+      "section": 10,
+      "start_time": 147.0,
+      "end_time": 150.0,
+      "start_frame": 3528,
+      "end_frame": 3600,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '每一句歌詞都是照書 聽不懂的人只能叫輸'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_10.png"
+    },
+    {
+      "shot_id": "shot_031",
+      "section": 11,
+      "start_time": 150.0,
+      "end_time": 156.0,
+      "start_frame": 3600,
+      "end_frame": 3744,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_11.png"
+    },
+    {
+      "shot_id": "shot_032",
+      "section": 11,
+      "start_time": 156.0,
+      "end_time": 162.0,
+      "start_frame": 3744,
+      "end_frame": 3888,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'Jade around my neck, 冷冰冰的玉 Heart of fire, 熱騰騰的氣'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_11.png"
+    },
+    {
+      "shot_id": "shot_033",
+      "section": 11,
+      "start_time": 162.0,
+      "end_time": 165.0,
+      "start_frame": 3888,
+      "end_frame": 3960,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_11.png"
+    },
+    {
+      "shot_id": "shot_034",
+      "section": 12,
+      "start_time": 165.0,
+      "end_time": 171.0,
+      "start_frame": 3960,
+      "end_frame": 4104,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '不要問我這裡是不是禁區 For me, everywhere is VIP.'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_12.png"
+    },
+    {
+      "shot_id": "shot_035",
+      "section": 12,
+      "start_time": 171.0,
+      "end_time": 177.0,
+      "start_frame": 4104,
+      "end_frame": 4248,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_12.png"
+    },
+    {
+      "shot_id": "shot_036",
+      "section": 12,
+      "start_time": 177.0,
+      "end_time": 180.0,
+      "start_frame": 4248,
+      "end_frame": 4320,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '紅牆黃瓦 霓虹大廈 過去現在 在此交叉 I see it all.'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_12.png"
+    },
+    {
+      "shot_id": "shot_037",
+      "section": 13,
+      "start_time": 180.0,
+      "end_time": 186.0,
+      "start_frame": 4320,
+      "end_frame": 4464,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_13.png"
+    },
+    {
+      "shot_id": "shot_038",
+      "section": 13,
+      "start_time": 186.0,
+      "end_time": 192.0,
+      "start_frame": 4464,
+      "end_frame": 4608,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_13.png"
+    },
+    {
+      "shot_id": "shot_039",
+      "section": 13,
+      "start_time": 192.0,
+      "end_time": 195.0,
+      "start_frame": 4608,
+      "end_frame": 4680,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '[Genre Switch: Jersey Club 142BPM] KAI ONYX in the house! 紫禁城 in the house!'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_13.png"
+    },
+    {
+      "shot_id": "shot_040",
+      "section": 14,
+      "start_time": 195.0,
+      "end_time": 201.0,
+      "start_frame": 4680,
+      "end_frame": 4824,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_14.png"
+    },
+    {
+      "shot_id": "shot_041",
+      "section": 14,
+      "start_time": 201.0,
+      "end_time": 207.0,
+      "start_frame": 4824,
+      "end_frame": 4968,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_14.png"
+    },
+    {
+      "shot_id": "shot_042",
+      "section": 14,
+      "start_time": 207.0,
+      "end_time": 210.0,
+      "start_frame": 4968,
+      "end_frame": 5040,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_14.png"
+    },
+    {
+      "shot_id": "shot_043",
+      "section": 15,
+      "start_time": 210.0,
+      "end_time": 216.0,
+      "start_frame": 5040,
+      "end_frame": 5184,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'From 0 to 100, real quick 整個紫禁城都在看這部 flick'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_15.png"
+    },
+    {
+      "shot_id": "shot_044",
+      "section": 15,
+      "start_time": 216.0,
+      "end_time": 222.0,
+      "start_frame": 5184,
+      "end_frame": 5328,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_15.png"
+    },
+    {
+      "shot_id": "shot_045",
+      "section": 15,
+      "start_time": 222.0,
+      "end_time": 225.0,
+      "start_frame": 5328,
+      "end_frame": 5400,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_15.png"
+    },
+    {
+      "shot_id": "shot_046",
+      "section": 16,
+      "start_time": 225.0,
+      "end_time": 231.0,
+      "start_frame": 5400,
+      "end_frame": 5544,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '歷史課本會記住我的 name KAI ONYX, remember the flame'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_16.png"
+    },
+    {
+      "shot_id": "shot_047",
+      "section": 16,
+      "start_time": 231.0,
+      "end_time": 237.0,
+      "start_frame": 5544,
+      "end_frame": 5688,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_16.png"
+    },
+    {
+      "shot_id": "shot_048",
+      "section": 16,
+      "start_time": 237.0,
+      "end_time": 240.0,
+      "start_frame": 5688,
+      "end_frame": 5760,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_16.png"
+    },
+    {
+      "shot_id": "shot_049",
+      "section": 17,
+      "start_time": 240.0,
+      "end_time": 246.0,
+      "start_frame": 5760,
+      "end_frame": 5904,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: 'Forbidden Night, 紫禁夜行 只有強者才配擁有這個夜景'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_17.png"
+    },
+    {
+      "shot_id": "shot_050",
+      "section": 17,
+      "start_time": 246.0,
+      "end_time": 252.0,
+      "start_frame": 5904,
+      "end_frame": 6048,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_17.png"
+    },
+    {
+      "shot_id": "shot_051",
+      "section": 17,
+      "start_time": 252.0,
+      "end_time": 255.0,
+      "start_frame": 6048,
+      "end_frame": 6120,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_17.png"
+    },
+    {
+      "shot_id": "shot_052",
+      "section": 18,
+      "start_time": 255.0,
+      "end_time": 261.0,
+      "start_frame": 6120,
+      "end_frame": 6264,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: '(Guzheng fades out with police sirens and rain sounds)'",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_18.png"
+    },
+    {
+      "shot_id": "shot_053",
+      "section": 18,
+      "start_time": 261.0,
+      "end_time": 267.0,
+      "start_frame": 6264,
+      "end_frame": 6408,
+      "duration_sec": 6.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_18.png"
+    },
+    {
+      "shot_id": "shot_054",
+      "section": 18,
+      "start_time": 267.0,
+      "end_time": 270.0,
+      "start_frame": 6408,
+      "end_frame": 6480,
+      "duration_sec": 3.0,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_18.png"
+    },
+    {
+      "shot_id": "shot_055",
+      "section": 19,
+      "start_time": 270.0,
+      "end_time": 270.08,
+      "start_frame": 6480,
+      "end_frame": 6482,
+      "duration_sec": 0.08,
+      "camera": {
+        "lens": "cinematic_35mm",
+        "movement": "slow_push_in"
+      },
+      "prompt": "Cinematic 8K MV shot, Chinese Melodic Drill, Dark Trap, Jersey Club switch, Guzheng sample, heavy 808 slides, rapid hi-hats, aggressive flow, male vocals, deep voice, cinematic atmosphere, ominous, majestic style, character performing in dramatic lighting, slow_push_in camera angle, photorealistic, 35mm film grain, dynamic mood. Lyric theme: ''",
+      "character_ref": "character_main_sheet.png",
+      "location_ref": "location_sec_19.png"
+    }
+  ]
+}
