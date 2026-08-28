@@ -1,0 +1,29 @@
+{
+  "project_name": "ai_video_mv_demo",
+  "director": "林從胤 AI 影像團隊",
+  "aspect_ratio": "16:9",
+  "target_resolution": "1080p",
+  "higgsfield_model": "dop-preview",
+  "shots": [
+    {
+      "shot_id": "shot_01",
+      "title": "Neon Alley Musician",
+      "prompt": "Cinematic medium close-up shot of a Taiwanese male musician holding a vintage electric guitar in a rain-slicked Taipei alley, neon signs reflecting on wet asphalt, ARRI Alexa 35mm f/1.4, slow push-in tracking shot",
+      "lens": "35mm anamorphic prime lens, f/1.4",
+      "movement": "camera_push_in",
+      "motion_id": "camera_push_in",
+      "image_url": "",
+      "audio_cue": "Guitar intro hook starts at 0:00"
+    },
+    {
+      "shot_id": "shot_02",
+      "title": "Stage Concert Flare",
+      "prompt": "Wide angle concert stage performance, dramatic volumetric stage lights, lens flare, crowd cheering in silhouette, camera panning right slowly",
+      "lens": "24mm ultra-wide prime lens",
+      "movement": "camera_pan_right",
+      "motion_id": "camera_pan_right",
+      "image_url": "",
+      "audio_cue": "Chorus drop at 0:05"
+    }
+  ]
+}

@@ -3,7 +3,9 @@ Higgsfield AI API Client
 Async wrapper for the Higgsfield AI platform API
 """
 import httpx
+from pathlib import Path
 from typing import Optional, List, Dict, Any, Union
+
 
 
 class HiggsfieldClient:
@@ -379,3 +381,90 @@ class HiggsfieldClient:
             )
             response.raise_for_status()
             return response.json()
+
+    async def download_media(
+        self,
+        url: str,
+        output_path: Union[str, Path]
+    ) -> Path:
+        """
+        Download rendered media (image/video) from a public URL to local filesystem.
+
+        Args:
+            url: Direct URL to the media asset
+            output_path: Local file path where the file should be saved
+
+        Returns:
+            Path object of the saved file
+        """
+        output_path = Path(output_path)
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+
+        async with httpx.AsyncClient(timeout=120.0, follow_redirects=True) as client:
+            response = await client.get(url)
+            response.raise_for_status()
+            with open(output_path, "wb") as f:
+                f.write(response.content)
+
+        return output_path
+
+    async def poll_and_download(
+        self,
+        job_set_id: str,
+        output_dir: Union[str, Path],
+        poll_interval: float = 5.0,
+        timeout: float = 300.0
+    ) -> List[Dict[str, Any]]:
+        """
+        Poll job status until finished and download all completed outputs.
+
+        Args:
+            job_set_id: Job set ID to poll
+            output_dir: Target directory for downloaded media files
+            poll_interval: Seconds between polls (default: 5.0)
+            timeout: Maximum seconds to wait before timing out (default: 300.0)
+
+        Returns:
+            List of dicts containing saved_path, url, and media_type
+        """
+        import asyncio
+        import time
+
+        output_dir = Path(output_dir)
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            res = await self.get_job_results(job_set_id)
+            status = res.get("status", "").upper()
+
+            if status in ["COMPLETED", "FINISHED", "SUCCESS"]:
+                saved_files = []
+                jobs = res.get("jobs", [])
+                for idx, job in enumerate(jobs):
+                    results = job.get("results", {})
+                    # Check for video URL or image URL
+                    media_url = results.get("video_url") or results.get("image_url") or results.get("url")
+                    if not media_url and isinstance(results, list) and len(results) > 0:
+                        media_url = results[0].get("url") or results[0].get("video_url") or results[0].get("image_url")
+
+                    if media_url:
+                        ext = ".mp4" if ".mp4" in media_url.lower() or "video" in str(job.get("type", "")).lower() else ".png"
+                        file_name = f"{job_set_id}_{idx}{ext}"
+                        target_file = output_dir / file_name
+                        saved_path = await self.download_media(media_url, target_file)
+                        saved_files.append({
+                            "saved_path": str(saved_path),
+                            "url": media_url,
+                            "job_id": job.get("id"),
+                            "type": job.get("type")
+                        })
+                return saved_files
+
+            if status in ["FAILED", "CANCELLED", "ERROR"]:
+                raise RuntimeError(f"Job set {job_set_id} failed with status: {status}, details: {res}")
+
+            await asyncio.sleep(poll_interval)
+
+        raise TimeoutError(f"Polling job set {job_set_id} timed out after {timeout} seconds")
+

@@ -10,6 +10,24 @@
         "HF_API_KEY": "${HF_API_KEY}",
         "HF_SECRET": "${HF_SECRET}"
       }
+    },
+    "blender": {
+      "command": "python",
+      "args": [
+        "src/blender_mcp/server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "."
+      }
+    },
+    "capcut": {
+      "command": "python",
+      "args": [
+        "src/capcut_mcp/server.py"
+      ],
+      "env": {
+        "PYTHONPATH": "."
+      }
     }
   }
 }

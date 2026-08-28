@@ -1,0 +1,93 @@
+version: "4.0.0"
+project_name: "AI MV Autonomous Directing Platform"
+baseline_compatibility: "Gemini Video MCP v3.3"
+architecture:
+  pattern: "Layered Domain-Driven Autonomous Directing Platform"
+  layers:
+    - name: "Director Domain & Bibles"
+      path: "src/ai_mv_director/domain"
+      description: "Immutable entity models for Project, Music, Story, Characters, Scenes, Shots, Takes, QA, and Cost."
+    - name: "Timeline & Musical Engine"
+      path: "src/ai_mv_director/timeline"
+      description: "Audio-to-timeline engine with BPM, beat, energy, section, and cut candidate analysis."
+    - name: "Intelligent Model Router"
+      path: "src/ai_mv_director/router"
+      description: "Deterministic, traceable multi-provider model routing."
+    - name: "Cost Governance & Budget Gate"
+      path: "src/ai_mv_director/governance"
+      description: "CostEstimator, BudgetManager, and CostGate enforcing COST_OK, COST_WARNING, and COST_BLOCKED states."
+    - name: "Autonomous Execution & Job Engine"
+      path: "src/ai_mv_director/jobs"
+      description: "Async job queue with state checkpoints, retry policies, and pause/resume capabilities."
+    - name: "Continuity QA & Lineage Engine"
+      path: "src/ai_mv_director/qa"
+      description: "10-layer continuity evaluation (Visual, Character, Wardrobe, Scene, Lighting, Color, Object, Motion, Semantic, Temporal) and immutable DAG take lineage."
+    - name: "System 4.2 Adapter"
+      path: "src/ai_mv_director/system42"
+      description: "Senior Agent bridge exposing CapabilityRegistry, DecisionTrace, PolicyGate, EvidenceGuard, and ADRs."
+    - name: "Execution MCP & Provider Layer"
+      path: "src/gemini_video_mcp"
+      description: "FastMCP server and provider adapters (Mock, Veo 3.1, Omni 1.1 Flash)."
+
+provider_capabilities:
+  veo-3.1-generate-preview:
+    quality: "Standard"
+    max_duration_sec: 8
+    resolutions: ["720p", "1080p", "4k"]
+    native_audio: true
+    reference_images: true
+  veo-3.1-fast-generate-preview:
+    quality: "Fast"
+    max_duration_sec: 8
+    resolutions: ["720p", "1080p", "4k"]
+    native_audio: true
+    reference_images: true
+  veo-3.1-lite-generate-preview:
+    quality: "Lite"
+    max_duration_sec: 8
+    resolutions: ["720p", "1080p"]
+    native_audio: false
+    reference_images: false
+  gemini-omni-1.1-flash:
+    quality: "Omni GA"
+    max_duration_sec: 10
+    resolutions: ["360p", "720p", "1080p", "4k"]
+    stateful_editing: true
+    first_last_frame: true
+    video_extension: true
+    max_total_extension_sec: 40
+    native_audio: true
+
+quality_gates:
+  qa_threshold: 0.80
+  character_threshold: 0.85
+  scene_threshold: 0.80
+  temporal_motion_threshold: 0.75
+
+cost_gates:
+  states:
+    - "COST_OK"
+    - "COST_WARNING"
+    - "COST_BLOCKED"
+  approval_token_required: true
+
+workflow_states:
+  - "PLAN"
+  - "VALIDATE"
+  - "DRY_RUN"
+  - "COST_GATE"
+  - "APPROVAL"
+  - "QUEUE"
+  - "EXECUTE"
+  - "QA"
+  - "RETRY_OR_ACCEPT"
+  - "ACTIVE"
+
+testing_strategy:
+  unit_tests: "tests/unit"
+  integration_tests: "tests/integration"
+  regression_tests: "scripts/test_gemini_video_v33.py"
+  target_metrics:
+    regression_rate: "0%"
+    silent_failures: "0"
+    unbounded_retries: "0"

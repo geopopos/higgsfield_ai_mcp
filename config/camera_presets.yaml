@@ -1,0 +1,42 @@
+# Camera Presets for Blender Previs & Video Motion Control
+
+presets:
+  cinematic_35mm:
+    focal_length: 35.0 # mm
+    sensor_width: 36.0 # mm
+    dof_enabled: true
+    f_stop: 2.8
+    iso: 400
+    motion_blur: true
+
+  wide_24mm:
+    focal_length: 24.0
+    sensor_width: 36.0
+    dof_enabled: false
+    f_stop: 4.0
+    iso: 200
+
+  portrait_85mm:
+    focal_length: 85.0
+    sensor_width: 36.0
+    dof_enabled: true
+    f_stop: 1.8
+    iso: 100
+
+movements:
+  slow_push_in:
+    type: "dolly"
+    speed_factor: 1.0
+    direction: "forward"
+  orbit_3d:
+    type: "orbit"
+    radius: 3.5
+    rotation_speed: 15.0 # deg/sec
+  pan_tracking:
+    type: "pan"
+    speed_factor: 1.2
+  fast_zoom_drop:
+    type: "zoom"
+    start_fov: 60
+    end_fov: 30
+    duration_beats: 1

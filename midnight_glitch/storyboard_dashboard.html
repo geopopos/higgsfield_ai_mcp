@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIDNIGHT GLITCH - AI 製片分鏡與視覺資產總覽</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --bg-primary: #07090e;
+      --bg-secondary: #0d1117;
+      --bg-card: rgba(18, 24, 38, 0.75);
+      --bg-card-hover: rgba(28, 36, 56, 0.85);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(255, 59, 105, 0.35);
+      
+      --accent-pink: #ff2a6d;
+      --accent-cyan: #05d9e8;
+      --accent-purple: #9d4edd;
+      --accent-gold: #ffbe0b;
+      --accent-green: #00f5d4;
+
+      --text-main: #f0f4f8;
+      --text-muted: #8b9bb4;
+      --text-dim: #50607a;
+
+      --font-display: 'Cinzel', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(255, 42, 109, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(5, 217, 232, 0.07) 0%, transparent 40%),
+        linear-gradient(to bottom, #07090e, #0a0d14);
+      background-attachment: fixed;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 32px 24px 80px 24px;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 32px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .badge-mv {
+      background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+      color: #fff;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .project-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #fff, #ff2a6d 50%, #05d9e8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 25px rgba(255, 42, 109, 0.3);
+    }
+
+    .project-subtitle {
+      color: var(--text-muted);
+      font-size: 13px;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Audio Pill / Player Bar */
+    .audio-player-pill {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-accent);
+      padding: 10px 18px;
+      border-radius: 40px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .play-btn {
+      background: linear-gradient(135deg, var(--accent-pink), #ff0055);
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: white;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+    }
+
+    .play-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(255, 42, 109, 0.8);
+    }
+
+    .audio-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .audio-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .audio-sub {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--accent-cyan);
+    }
+
+    /* Stats Grid */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 18px 20px;
+      border-radius: 14px;
+      backdrop-filter: blur(12px);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-accent);
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent-cyan);
+    }
+
+    .stat-card:nth-child(2)::before { background: var(--accent-pink); }
+    .stat-card:nth-child(3)::before { background: var(--accent-purple); }
+    .stat-card:nth-child(4)::before { background: var(--accent-gold); }
+    .stat-card:nth-child(5)::before { background: var(--accent-green); }
+
+    .stat-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .stat-value {
+      font-size: 22px;
+      font-weight: 800;
+      font-family: var(--font-mono);
+      color: var(--text-main);
+    }
+
+    .stat-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Navigation Tabs */
+    .tabs-nav {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 12px;
+      overflow-x: auto;
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .tab-btn:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(255, 42, 109, 0.15), rgba(5, 217, 232, 0.15));
+      border: 1px solid var(--border-accent);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(255, 42, 109, 0.2);
+    }
+
+    /* Content Panes */
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Controls / Filters */
+    .table-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      background: var(--bg-card);
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .filter-label {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .filter-select, .search-input {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .filter-select:focus, .search-input:focus {
+      border-color: var(--accent-cyan);
+    }
+
+    .btn-action {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: rgba(255, 42, 109, 0.2);
+      border-color: var(--accent-pink);
+      color: #fff;
+    }
+
+    /* Shot Cards & Grid */
+    .shots-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .shot-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 14px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      transition: all 0.2s ease;
+      display: grid;
+      grid-template-columns: 140px 160px 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    @media (max-width: 1100px) {
+      .shot-card {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+
+    .shot-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Shot ID & Time */
+    .shot-id-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .shot-id-badge {
+      font-family: var(--font-mono);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      background: rgba(5, 217, 232, 0.1);
+      border: 1px solid rgba(5, 217, 232, 0.3);
+      padding: 6px 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .shot-time-info {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .shot-duration-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    /* Camera Info */
+    .shot-camera-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tag-lens {
+      font-size: 12px;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tag-motion {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: rgba(157, 78, 221, 0.15);
+      border: 1px solid rgba(157, 78, 221, 0.4);
+      color: #d8b4fe;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Lyric & Emotion Box */
+    .shot-lyric-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .lyric-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .lyric-title span {
+      color: var(--accent-pink);
+    }
+
+    .scene-mood-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Prompt Box */
+    .shot-prompt-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 12px;
+      position: relative;
+    }
+
+    .prompt-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .prompt-tag {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dim);
+    }
+
+    .btn-copy {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-muted);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-copy:hover {
+      background: var(--accent-pink);
+      color: #fff;
+      border-color: var(--accent-pink);
+    }
+
+    .prompt-text {
+      font-size: 12px;
+      color: #c9d1d9;
+      line-height: 1.45;
+      font-family: var(--font-mono);
+      max-height: 75px;
+      overflow-y: auto;
+      word-break: break-word;
+    }
+
+    /* Asset Grid (Tab 2) */
+    .assets-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    .asset-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(12px);
+      transition: all 0.2s ease;
+    }
+
+    .asset-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+    }
+
+    .asset-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .asset-type-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+    }
+
+    .type-char {
+      background: rgba(255, 42, 109, 0.15);
+      color: var(--accent-pink);
+      border: 1px solid rgba(255, 42, 109, 0.4);
+    }
+
+    .type-loc {
+      background: rgba(5, 217, 232, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(5, 217, 232, 0.4);
+    }
+
+    .asset-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .asset-file {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--accent-gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .asset-prompt-box {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+
+    /* Stems & Audio (Tab 3) */
+    .stems-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stem-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+
+    .stem-card:hover {
+      border-color: var(--accent-cyan);
+    }
+
+    .stem-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .stem-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .stem-size {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+    }
+
+    /* Lyrics Display */
+    .lyrics-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 28px;
+      font-family: var(--font-mono);
+      line-height: 1.7;
+      white-space: pre-wrap;
+      color: #d1d5db;
+      font-size: 13px;
+      max-height: 500px;
+      overflow-y: auto;
+    }
+
+    /* Toast Notification */
+    #toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #111827;
+      color: #fff;
+      border: 1px solid var(--accent-pink);
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <div>
+          <span class="badge-mv">AI Film Studio Pro</span>
+          <h1 class="project-title">MIDNIGHT GLITCH</h1>
+          <p class="project-subtitle">Korean Dark Trap ➔ Aggressive UK Drill Beat Switch (KAI ONYX)</p>
+        </div>
+      </div>
+
+      <!-- Master Audio Preview -->
+      <div class="audio-player-pill">
+        <audio id="audioMaster" src="02_audio/master_track.wav" preload="metadata"></audio>
+        <button class="play-btn" id="playBtn" onclick="togglePlay()">
+          <i data-lucide="play" id="playIcon"></i>
+        </button>
+        <div class="audio-meta">
+          <span class="audio-title">Master Audio Track</span>
+          <span class="audio-sub" id="timeDisplay">0:00 / 2:06 • 143.55 BPM</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Key Metrics -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-label">Tempo / BPM</div>
+        <div class="stat-value">143.55</div>
+        <div class="stat-desc">Drill / Trap Double Time</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Total Duration</div>
+        <div class="stat-value">126.68s</div>
+        <div class="stat-desc">3,040 Frames @ 24fps</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Storyboard Shots</div>
+        <div class="stat-value">35 鏡頭</div>
+        <div class="stat-desc">35mm & 85mm 運鏡矩陣</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Beat Switch</div>
+        <div class="stat-value">@ 57.0s</div>
+        <div class="stat-desc">UK Drill 140BPM Drop</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Audio Stems</div>
+        <div class="stat-value">9 Tracks</div>
+        <div class="stat-desc">Vocals, Drums, 808 Bass</div>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs-nav">
+      <button class="tab-btn active" onclick="switchTab('shots')">
+        <i data-lucide="clapperboard"></i> 🎬 鏡頭分鏡明細 (Storyboard Matrix)
+      </button>
+      <button class="tab-btn" onclick="switchTab('bible')">
+        <i data-lucide="book-open"></i> 📖 導演企劃與運鏡白皮書 (Director's Master Plan)
+      </button>
+      <button class="tab-btn" onclick="switchTab('assets')">
+        <i data-lucide="palette"></i> 🎨 視覺資產需求庫 (Asset Bible)
+      </button>
+      <button class="tab-btn" onclick="switchTab('audio')">
+        <i data-lucide="music"></i> 🎧 分軌與母帶 (Audio Stems)
+      </button>
+      <button class="tab-btn" onclick="switchTab('lyrics')">
+        <i data-lucide="file-text"></i> 📜 完整歌詞與劇本 (Lyrics & Script)
+      </button>
+    </div>
+
+    <!-- Tab 1: Shots Storyboard -->
+    <div id="pane-shots" class="tab-pane active">
+      <div class="table-controls">
+        <div class="filter-group">
+          <span class="filter-label">運鏡篩選:</span>
+          <select id="cameraFilter" class="filter-select" onchange="filterShots()">
+            <option value="all">全部鏡頭 (All Shots)</option>
+            <option value="slow_push_in">Slow Push In (沉浸推進)</option>
+            <option value="orbit_3d">Orbit 3D (環繞運鏡)</option>
+            <option value="fast_zoom_drop">Fast Zoom Drop (卡點急推)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <input type="text" id="searchInput" class="search-input" placeholder="搜尋歌詞或關鍵字..." onkeyup="searchShots()">
+          <button class="btn-action" onclick="copyAllPrompts()">
+            <i data-lucide="copy"></i> 一鍵複製全部 Prompt
+          </button>
+        </div>
+      </div>
+
+      <div class="shots-grid" id="shotsGrid">
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="(Yeah, midnight in the city) Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, dark neon Seoul alleyway at 3AM in heavy rain mist, 85mm shallow depth of field orbit 3D camera, photorealistic, 35mm film grain, moody cinematic vibe.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_001</div>
+            <div class="shot-time-info">
+              0.0s ➔ 4.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 0-96</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #1
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (Yeah, midnight in the city)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>深夜都市高空俯瞰，霧氣瀰漫的台北與首爾交錯霓虹街景，低沉暗黑氛圍
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, dark neon Seoul alleyway at 3AM in heavy rain mist, 85mm shallow depth of field orbit 3D camera, photorealistic, 35mm film grain, moody cinematic vibe.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, dark neon Seoul alleyway at 3AM in heavy rain mist, 85mm shallow depth of field orbit 3D camera, photorealistic, 35mm film grain, moody cinematic vibe.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="(Seoul to Taipei, we don't sleep) Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, wet asphalt reflecting violet and cyan neon signage (노래방, 편의점 24시), slow push in on KAI ONYX walking in dark techwear jacket, photorealistic 8k, 35mm grain.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_002</div>
+            <div class="shot-time-info">
+              4.0s ➔ 8.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 96-192</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #1
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (Seoul to Taipei, we don't sleep)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>深夜都市高空俯瞰，霧氣瀰漫的台北與首爾交錯霓虹街景，低沉暗黑氛圍
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, wet asphalt reflecting violet and cyan neon signage (노래방, 편의점 24시), slow push in on KAI ONYX walking in dark techwear jacket, photorealistic 8k, 35mm grain.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, wet asphalt reflecting violet and cyan neon signage (노래방, 편의점 24시), slow push in on KAI ONYX walking in dark techwear jacket, photorealistic 8k, 35mm grain.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="slow_push_in" data-text="(Turn it up, let's get it) Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, steam rising from street grates, KAI ONYX looking directly into camera with intense gaze, cinematic rim light, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_003</div>
+            <div class="shot-time-info">
+              8.0s ➔ 12.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 192-288</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="move-up-right" style="width:12px; height:12px;"></i>
+              Slow Push In
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #1
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (Turn it up, let's get it)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>深夜都市高空俯瞰，霧氣瀰漫的台北與首爾交錯霓虹街景，低沉暗黑氛圍
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, steam rising from street grates, KAI ONYX looking directly into camera with intense gaze, cinematic rim light, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, korean_dark_trap_uk_drill_cyberpunk style, steam rising from street grates, KAI ONYX looking directly into camera with intense gaze, cinematic rim light, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_speed_ramp_dive" data-text="(Dark piano melody, crisp hi-hat rolls - Diving into Underground) Cinematic 8K MV transition shot, FPV fast speed ramp camera diving down the neon-lit Seoul subway entrance staircase (지하철 2호선 입구), rushing down concrete stairs into the dark underground tunnel, motion blur, cyan and magenta lighting, seamless transition into subway tracks, photorealistic, 35mm film grain.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_004</div>
+            <div class="shot-time-info">
+              12.0s ➔ 15.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 288-360</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fast Speed Ramp Dive
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #1
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (Dark piano melody, crisp hi-hat rolls - Diving into Underground)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>深夜都市高空俯瞰，霧氣瀰漫的台北與首爾交錯霓虹街景，低沉暗黑氛圍
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV transition shot, FPV fast speed ramp camera diving down the neon-lit Seoul subway entrance staircase (지하철 2호선 입구), rushing down concrete stairs into the dark underground tunnel, motion blur, cyan and magenta lighting, seamless transition into subway tracks, photorealistic, 35mm film grain.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV transition shot, FPV fast speed ramp camera diving down the neon-lit Seoul subway entrance staircase (지하철 2호선 입구), rushing down concrete stairs into the dark underground tunnel, motion blur, cyan and magenta lighting, seamless transition into subway tracks, photorealistic, 35mm film grain.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="slow_push_in" data-text="새벽 세 시, 어둠 속에 번지는 smoke Cinematic 8K MV drop shot, camera emerging onto the Seoul underground subway tracks and platform as 808 sub-bass drops heavily, protagonist KAI ONYX standing on the tracks rapping fiercely into camera with dramatic rim lighting, dark trap aesthetics, volumetric mist, photorealistic 8k, 35mm lens.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_005</div>
+            <div class="shot-time-info">
+              15.0s ➔ 19.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 360-456</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="move-up-right" style="width:12px; height:12px;"></i>
+              Slow Push In
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #2
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 새벽 세 시, 어둠 속에 번지는 smoke
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>地下街頭雨夜，主角身穿暗黑龐克風衣手持麥克風，808 重低音踩踏地面震動
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV drop shot, camera emerging onto the Seoul underground subway tracks and platform as 808 sub-bass drops heavily, protagonist KAI ONYX standing on the tracks rapping fiercely into camera with dramatic rim lighting, dark trap aesthetics, volumetric mist, photorealistic 8k, 35mm lens.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV drop shot, camera emerging onto the Seoul underground subway tracks and platform as 808 sub-bass drops heavily, protagonist KAI ONYX standing on the tracks rapping fiercely into camera with dramatic rim lighting, dark trap aesthetics, volumetric mist, photorealistic 8k, 35mm lens.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="내 발밑에 깔린 도시, 절대 안 멈춰 Cinematic 8K MV shot, low-angle hero perspective along subway rails, exposed high-voltage cables on concrete walls, KAI ONYX rapping with bass shake micro-vibrations, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_006</div>
+            <div class="shot-time-info">
+              19.0s ➔ 23.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 456-552</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #2
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 내 발밑에 깔린 도시, 절대 안 멈춰
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>地下街頭雨夜，主角身穿暗黑龐克風衣手持麥克風，808 重低音踩踏地面震動
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, low-angle hero perspective along subway rails, exposed high-voltage cables on concrete walls, KAI ONYX rapping with bass shake micro-vibrations, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, low-angle hero perspective along subway rails, exposed high-voltage cables on concrete walls, KAI ONYX rapping with bass shake micro-vibrations, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="從台北一路殺到首爾的街頭, 絕不會回頭 Cinematic 8K MV shot, industrial corridor tracking shot, silver necklace and techwear reflective straps glowing under cold fluorescent lights, confident performance, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_007</div>
+            <div class="shot-time-info">
+              23.0s ➔ 27.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 552-648</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #2
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 從台北一路殺到首爾的街頭, 絕不會回頭
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>地下街頭雨夜，主角身穿暗黑龐克風衣手持麥克風，808 重低音踩踏地面震動
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, industrial corridor tracking shot, silver necklace and techwear reflective straps glowing under cold fluorescent lights, confident performance, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, industrial corridor tracking shot, silver necklace and techwear reflective straps glowing under cold fluorescent lights, confident performance, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="crash_zoom_in" data-text="All eyes on me, Ready for the fire, here we go! Cinematic 8K MV extreme close-up transition shot, camera crash zooms aggressively into protagonist KAI ONYX's sharp eye and intense killer gaze, pupil reflecting the cool blue neon of the subway platform, high-contrast cinematic lighting, photorealistic 8k, 85mm macro lens.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_008</div>
+            <div class="shot-time-info">
+              27.0s ➔ 30.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 648-720</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              MACRO 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Crash Zoom In
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #2
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> All eyes on me, Ready for the fire, here we go!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>地下街頭雨夜，主角身穿暗黑龐克風衣手持麥克風，808 重低音踩踏地面震動
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV extreme close-up transition shot, camera crash zooms aggressively into protagonist KAI ONYX's sharp eye and intense killer gaze, pupil reflecting the cool blue neon of the subway platform, high-contrast cinematic lighting, photorealistic 8k, 85mm macro lens.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV extreme close-up transition shot, camera crash zooms aggressively into protagonist KAI ONYX's sharp eye and intense killer gaze, pupil reflecting the cool blue neon of the subway platform, high-contrast cinematic lighting, photorealistic 8k, 85mm macro lens.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_whip_pull_back" data-text="숨이 턱 끝까지 차올라도 Cinematic 8K MV match cut transition shot, pupil reflection instantly flashes and shifts to rotating crimson red emergency alert beacons, camera rapidly whips and pulls back from KAI ONYX's intense eye into a wide shot of the dark underground cyberpunk server vault pulsing with red warning alarm lights, photorealistic 8k, 24mm lens.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_009</div>
+            <div class="shot-time-info">
+              30.0s ➔ 34.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 720-816</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fast Whip Pull Back
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #3
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 숨이 턱 끝까지 차올라도
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>緊張感上升，急速加速的軍鼓，警示紅光閃爍，主角面部特寫與眼神殺氣
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV match cut transition shot, pupil reflection instantly flashes and shifts to rotating crimson red emergency alert beacons, camera rapidly whips and pulls back from KAI ONYX's intense eye into a wide shot of the dark underground cyberpunk server vault pulsing with red warning alarm lights, photorealistic 8k, 24mm lens.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV match cut transition shot, pupil reflection instantly flashes and shifts to rotating crimson red emergency alert beacons, camera rapidly whips and pulls back from KAI ONYX's intense eye into a wide shot of the dark underground cyberpunk server vault pulsing with red warning alarm lights, photorealistic 8k, 24mm lens.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="절대로 물러서지 않아, we glow Cinematic 8K MV shot, server racks pulsing with cyan data LEDs under rotating crimson alert beacons, KAI ONYX performing with intense rising energy, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_010</div>
+            <div class="shot-time-info">
+              34.0s ➔ 38.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 816-912</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #3
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 절대로 물러서지 않아, we glow
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>緊張感上升，急速加速的軍鼓，警示紅光閃爍，主角面部特寫與眼神殺氣
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, server racks pulsing with cyan data LEDs under rotating crimson alert beacons, KAI ONYX performing with intense rising energy, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, server racks pulsing with cyan data LEDs under rotating crimson alert beacons, KAI ONYX performing with intense rising energy, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="倒數三秒, 撕開黑夜的鎖 Cinematic 8K MV shot, rapid whip pan with accelerating snare drum roll, holographic code countdown on terminal screens, high-tension atmosphere, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_011</div>
+            <div class="shot-time-info">
+              38.0s ➔ 42.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 912-1008</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #3
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 倒數三秒, 撕開黑夜的鎖
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>緊張感上升，急速加速的軍鼓，警示紅光閃爍，主角面部特寫與眼神殺氣
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, rapid whip pan with accelerating snare drum roll, holographic code countdown on terminal screens, high-tension atmosphere, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, rapid whip pan with accelerating snare drum roll, holographic code countdown on terminal screens, high-tension atmosphere, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="explosive_punch_forward" data-text="Now witness the heat, let it blow! Cinematic 8K MV transition shot, in the red alert server room as countdown hits zero, KAI ONYX delivers line 'Now witness the heat, let it blow!' and slams control console, screens burst into blinding white energy shockwave explosion flare, camera punches forward into blinding light, seamless transition into fire dome, photorealistic 8k, 24mm lens.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_012</div>
+            <div class="shot-time-info">
+              42.0s ➔ 45.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1008-1080</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Explosive Punch Forward
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #3
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> Now witness the heat, let it blow!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>緊張感上升，急速加速的軍鼓，警示紅光閃爍，主角面部特寫與眼神殺氣
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV transition shot, in the red alert server room as countdown hits zero, KAI ONYX delivers line 'Now witness the heat, let it blow!' and slams control console, screens burst into blinding white energy shockwave explosion flare, camera punches forward into blinding light, seamless transition into fire dome, photorealistic 8k, 24mm lens.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV transition shot, in the red alert server room as countdown hits zero, KAI ONYX delivers line 'Now witness the heat, let it blow!' and slams control console, screens burst into blinding white energy shockwave explosion flare, camera punches forward into blinding light, seamless transition into fire dome, photorealistic 8k, 24mm lens.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="crane_jib_up_fire_burst" data-text="We run this city! We run this throne! Cinematic 8K MV explosion drop shot, blinding shockwave erupts seamlessly into massive towering pillars of vertical fire and golden sparks inside the industrial throne dome as Chorus 1 brass drops heavily, protagonist KAI ONYX commanding the throne surrounded by armored vehicles and blazing superbikes, camera jibs up dynamically, photorealistic 8k, 18mm lens.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_013</div>
+            <div class="shot-time-info">
+              45.0s ➔ 49.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1080-1176</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Crane Jib Up Fire Burst
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #4
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> We run this city! We run this throne!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>王座降臨！巨大能量爆發，火焰與金色碎屑飛濺，身後重機與群體氣勢震撼
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV explosion drop shot, blinding shockwave erupts seamlessly into massive towering pillars of vertical fire and golden sparks inside the industrial throne dome as Chorus 1 brass drops heavily, protagonist KAI ONYX commanding the throne surrounded by armored vehicles and blazing superbikes, camera jibs up dynamically, photorealistic 8k, 18mm lens.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV explosion drop shot, blinding shockwave erupts seamlessly into massive towering pillars of vertical fire and golden sparks inside the industrial throne dome as Chorus 1 brass drops heavily, protagonist KAI ONYX commanding the throne surrounded by armored vehicles and blazing superbikes, camera jibs up dynamically, photorealistic 8k, 18mm lens.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="踩碎所有質疑, king on the zone! Cinematic 8K MV shot, dynamic 360 orbit around KAI ONYX standing atop armored vehicle, blazing pyro flames and gold sparks flying, massive energy explosion, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_014</div>
+            <div class="shot-time-info">
+              49.0s ➔ 53.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1176-1272</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #4
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 踩碎所有質疑, king on the zone!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>王座降臨！巨大能量爆發，火焰與金色碎屑飛濺，身後重機與群體氣勢震撼
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, dynamic 360 orbit around KAI ONYX standing atop armored vehicle, blazing pyro flames and gold sparks flying, massive energy explosion, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, dynamic 360 orbit around KAI ONYX standing atop armored vehicle, blazing pyro flames and gold sparks flying, massive energy explosion, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="We run this city! Take the crown home! Cinematic 8K MV shot, superbike fleet headlights piercing through dense smoke, KAI ONYX commanding the entire dome with intense authority, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_015</div>
+            <div class="shot-time-info">
+              53.0s ➔ 57.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1272-1368</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #4
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> We run this city! Take the crown home!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>王座降臨！巨大能量爆發，火焰與金色碎屑飛濺，身後重機與群體氣勢震撼
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, superbike fleet headlights piercing through dense smoke, KAI ONYX commanding the entire dome with intense authority, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, superbike fleet headlights piercing through dense smoke, KAI ONYX commanding the entire dome with intense authority, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="tape_stop_flash_freeze" data-text="(야, 비트 바꿔. Ayo, switch the beat up!) Cinematic 8K MV beat switch transition shot, @ 57.0s tape stops instantly, gun cocking sound effect, camera freezes and flashes into high-contrast monochrome black and white, KAI ONYX turning sharply with blade-like intensity, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_016</div>
+            <div class="shot-time-info">
+              57.0s ➔ 60.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1368-1440</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Tape Stop Flash Freeze
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #4
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (야, 비트 바꿔. Ayo, switch the beat up!)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>王座降臨！巨大能量爆發，火焰與金色碎屑飛濺，身後重機與群體氣勢震撼
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV beat switch transition shot, @ 57.0s tape stops instantly, gun cocking sound effect, camera freezes and flashes into high-contrast monochrome black and white, KAI ONYX turning sharply with blade-like intensity, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV beat switch transition shot, @ 57.0s tape stops instantly, gun cocking sound effect, camera freezes and flashes into high-contrast monochrome black and white, KAI ONYX turning sharply with blade-like intensity, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="dutch_angle_fast_cut" data-text="미드나잇 글리치, breaking every bone! Cinematic 8K MV UK drill drop shot, 140 BPM aggressive UK drill beat switch, sliding 808 bass, high-contrast monochrome silver aesthetic, 45 degree dutch angle, fast hand gestures, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_017</div>
+            <div class="shot-time-info">
+              60.0s ➔ 64.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1440-1536</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Dutch Angle Fast Cut
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #5
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 미드나잇 글리치, breaking every bone!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>磁帶急停靜音！警笛呼嘯，槍機上膛音效，畫面瞬間切換至 140 BPM 黑白高對比抽格
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV UK drill drop shot, 140 BPM aggressive UK drill beat switch, sliding 808 bass, high-contrast monochrome silver aesthetic, 45 degree dutch angle, fast hand gestures, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV UK drill drop shot, 140 BPM aggressive UK drill beat switch, sliding 808 bass, high-contrast monochrome silver aesthetic, 45 degree dutch angle, fast hand gestures, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="dutch_angle_fast_cut" data-text="판을 뒤집어 엎어, 다 싹 다 비켜! 마이크를 잡는瞬間 난 괴물로 바뀌어! Cinematic 8K MV shot, aggressive drill rap flow, metallic reflections cutting through the night, fast cuts on 808 glides, intense facial performance, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_018</div>
+            <div class="shot-time-info">
+              64.0s ➔ 68.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1536-1632</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Dutch Angle Fast Cut
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #5
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 판을 뒤집어 엎어, 다 싹 다 비켜! 마이크를 잡는瞬間 난 괴물로 바뀌어!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>磁帶急停靜音！警笛呼嘯，槍機上膛音效，畫面瞬間切換至 140 BPM 黑白高對比抽格
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, aggressive drill rap flow, metallic reflections cutting through the night, fast cuts on 808 glides, intense facial performance, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, aggressive drill rap flow, metallic reflections cutting through the night, fast cuts on 808 glides, intense facial performance, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="orbit_3d" data-text="너네가 자랑하는 래퍼들의 기교? 내 혓바닥은 칼날, 네 목을 베어 넘겨! Cinematic 8K MV shot, blade metal sheen reflection, extreme speed and double-time rap delivery, monochrome dark cyber aesthetic, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_019</div>
+            <div class="shot-time-info">
+              68.0s ➔ 72.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1632-1728</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="rotate-3d" style="width:12px; height:12px;"></i>
+              Orbit 3D
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #5
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 너네가 자랑하는 래퍼들의 기교? 내 혓바닥은 칼날, 네 목을 베어 넘겨!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>磁帶急停靜音！警笛呼嘯，槍機上膛音效，畫面瞬間切換至 140 BPM 黑白高對比抽格
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, blade metal sheen reflection, extreme speed and double-time rap delivery, monochrome dark cyber aesthetic, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, blade metal sheen reflection, extreme speed and double-time rap delivery, monochrome dark cyber aesthetic, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="speed_ramp_glide" data-text="誰敢擋在前面, 刀光劃破夜空! 絕對的統治力, 撕裂這片虛空! Cinematic 8K MV transition shot, blade slash motion blur cutting across the dark night sky, sliding 808 sub bass bend, camera whips rapidly, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_020</div>
+            <div class="shot-time-info">
+              72.0s ➔ 75.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1728-1800</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Speed Ramp Glide
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #5
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 誰敢擋在前面, 刀光劃破夜空! 絕對的統治力, 撕裂這片虛空!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>磁帶急停靜音！警笛呼嘯，槍機上膛音效，畫面瞬間切換至 140 BPM 黑白高對比抽格
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV transition shot, blade slash motion blur cutting across the dark night sky, sliding 808 sub bass bend, camera whips rapidly, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV transition shot, blade slash motion blur cutting across the dark night sky, sliding 808 sub bass bend, camera whips rapidly, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fpv_drone_rush" data-text="Rhyme and flow, lethal like a weapon! Class is in session! Cinematic 8K MV shot, FPV drone rush beneath Seoul elevated highway, sliding 808 bass glides, techwear jacket flapping in high speed wind, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_021</div>
+            <div class="shot-time-info">
+              75.0s ➔ 79.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1800-1896</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fpv Drone Rush
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #6
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> Rhyme and flow, lethal like a weapon! Class is in session!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>極速雙倍押 Drill 刀光流！滑音 808 狂飆，手勢快切與金屬反光撕裂夜空
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, FPV drone rush beneath Seoul elevated highway, sliding 808 bass glides, techwear jacket flapping in high speed wind, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, FPV drone rush beneath Seoul elevated highway, sliding 808 bass glides, techwear jacket flapping in high speed wind, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="glitch_whip_pan" data-text="어둠 속에서 피어난 flames, Nobody can play my games Cinematic 8K MV shot, black industrial ruins with digital hologram glitch artifacts, KAI ONYX in lethal rap stance, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_022</div>
+            <div class="shot-time-info">
+              79.0s ➔ 83.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1896-1992</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              PORTRAIT 85MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Glitch Whip Pan
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #6
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 어둠 속에서 피어난 flames, Nobody can play my games
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>極速雙倍押 Drill 刀光流！滑音 808 狂飆，手勢快切與金屬反光撕裂夜空
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, black industrial ruins with digital hologram glitch artifacts, KAI ONYX in lethal rap stance, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, black industrial ruins with digital hologram glitch artifacts, KAI ONYX in lethal rap stance, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="slow_push_in" data-text="破曉之前, 重寫遊戲規則! We taking over, now and forever! Cinematic 8K MV shot, low angle looking up at KAI ONYX against cybernetic stormy sky, declaring total dominance, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_023</div>
+            <div class="shot-time-info">
+              83.0s ➔ 87.0s<br>
+              <span class="shot-duration-tag">4.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 1992-2088</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              WIDE 24MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="move-up-right" style="width:12px; height:12px;"></i>
+              Slow Push In
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #6
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 破曉之前, 重寫遊戲規則! We taking over, now and forever!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>極速雙倍押 Drill 刀光流！滑音 808 狂飆，手勢快切與金屬反光撕裂夜空
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, low angle looking up at KAI ONYX against cybernetic stormy sky, declaring total dominance, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, low angle looking up at KAI ONYX against cybernetic stormy sky, declaring total dominance, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="crane_rooftop_lift" data-text="(Sliding 808 sub bass drop & Drill Hi-Hat stutters) Cinematic 8K MV transition shot, sliding 808 sub bass drop and drill hi-hat rolls, camera rockets vertically up to the pinnacle skyscraper rooftop, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_024</div>
+            <div class="shot-time-info">
+              87.0s ➔ 90.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 2088-2160</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Crane Rooftop Lift
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #6
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> (Sliding 808 sub bass drop & Drill Hi-Hat stutters)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>極速雙倍押 Drill 刀光流！滑音 808 狂飆，手勢快切與金屬反光撕裂夜空
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV transition shot, sliding 808 sub bass drop and drill hi-hat rolls, camera rockets vertically up to the pinnacle skyscraper rooftop, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV transition shot, sliding 808 sub bass drop and drill hi-hat rolls, camera rockets vertically up to the pinnacle skyscraper rooftop, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_zoom_drop" data-text="We run this city! (Hey!) Cinematic 8K MV climax shot, standing on edge of Seoul skyscraper rooftop helipad, massive city rain night skyline below, glowing holographic logo on ground, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_025</div>
+            <div class="shot-time-info">
+              90.0s ➔ 93.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 2160-2232</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fast Zoom Drop
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #7
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> We run this city! (Hey!)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>火海中破曉重生，極致廣角升降鏡頭，宣告掌控全城，冷峻定格 Game Over
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV climax shot, standing on edge of Seoul skyscraper rooftop helipad, massive city rain night skyline below, glowing holographic logo on ground, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV climax shot, standing on edge of Seoul skyscraper rooftop helipad, massive city rain night skyline below, glowing holographic logo on ground, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_zoom_drop" data-text="We run this throne! (Hey!) Cinematic 8K MV shot, lightning strikes and citywide neon overload flashes behind KAI ONYX, ultimate power stance, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_026</div>
+            <div class="shot-time-info">
+              93.0s ➔ 96.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 2232-2304</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fast Zoom Drop
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #7
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> We run this throne! (Hey!)
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>火海中破曉重生，極致廣角升降鏡頭，宣告掌控全城，冷峻定格 Game Over
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, lightning strikes and citywide neon overload flashes behind KAI ONYX, ultimate power stance, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, lightning strikes and citywide neon overload flashes behind KAI ONYX, ultimate power stance, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_zoom_drop" data-text="踩碎所有質疑, king on the zone! Cinematic 8K MV shot, 360 dynamic orbit at the highest point in Seoul, golden fire embers swirling in rain wind, commanding the whole city, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_027</div>
+            <div class="shot-time-info">
+              96.0s ➔ 99.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 2304-2376</span>
+            </div>
+          </div>
+
+          <!-- Camera Settings -->
+          <div class="shot-camera-box">
+            <div class="tag-lens">
+              <i data-lucide="aperture" style="width:14px; height:14px; color:var(--accent-cyan);"></i>
+              ULTRA WIDE 18MM
+            </div>
+            <div class="tag-motion">
+              <i data-lucide="camera" style="width:12px; height:12px;"></i>
+              Fast Zoom Drop
+            </div>
+            <div style="font-size:11px; color:var(--text-dim); margin-top:4px;">
+              Section #7
+            </div>
+          </div>
+
+          <!-- Lyric Theme & Narrative -->
+          <div class="shot-lyric-box">
+            <div class="lyric-title">
+              <span>🎤</span> 踩碎所有質疑, king on the zone!
+            </div>
+            <div class="scene-mood-desc">
+              💡 <strong>場景意境：</strong>火海中破曉重生，極致廣角升降鏡頭，宣告掌控全城，冷峻定格 Game Over
+            </div>
+          </div>
+
+          <!-- Generation Prompt -->
+          <div class="shot-prompt-box">
+            <div class="prompt-header">
+              <span class="prompt-tag">Flux / Higgsfield Prompt</span>
+              <button class="btn-copy" onclick="copyText(`Cinematic 8K MV shot, 360 dynamic orbit at the highest point in Seoul, golden fire embers swirling in rain wind, commanding the whole city, photorealistic 8k.`)">
+                <i data-lucide="copy" style="width:11px; height:11px;"></i> 複製
+              </button>
+            </div>
+            <div class="prompt-text">Cinematic 8K MV shot, 360 dynamic orbit at the highest point in Seoul, golden fire embers swirling in rain wind, commanding the whole city, photorealistic 8k.</div>
+          </div>
+        </div>
+
+        <div class="shot-card" data-movement="fast_zoom_drop" data-text="Take the crown home! 미드나잇 글리치! Cinematic 8K MV shot, full power rap delivery at the skyscraper edge, extreme anamorphic lens flare, photorealistic 8k.">
+          <!-- Shot ID & Time -->
+          <div class="shot-id-box">
+            <div class="shot-id-badge">shot_028</div>
+            <div class="shot-time-info">
+              99.0s ➔ 102.0s<br>
+              <span class="shot-duration-tag">3.0 秒</span><br>
+              <span style="font-size:10px; color:var(--text-dim);">Frame 23
